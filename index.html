@@ -1,0 +1,202 @@
+<html>
+<head>
+    <title>Sudhanshu Agarwal</title>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type= "text/css" href="home.css">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen, projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#0D47A1">
+            
+    </head>
+    <body>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
+        <script type="text/javascript" src="js/materialize.min.js"> </script>
+        <script type="text/javascript">
+            $( document ).ready(function(){
+                $('.parallax').parallax();
+                $('.button-collapse').sideNav({
+                     menuWidth: 300,
+                     edge: 'right', 
+                     closeOnClick: true, 
+                     draggable: true 
+                 }
+                );
+                $('.scrollspy').scrollSpy();
+            });
+        </script>
+        
+        <script>
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function(){
+                            window.location.hash = hash;
+                        });
+                    } 
+                });
+            });
+            
+            function nopulse1() {
+                $("#menubtn").removeClass("pulse");
+                $("#menubtn").addClass("waves-effect waves-circle waves-light");
+            }
+            
+            function nopulse2() {
+                $("#downarrow").removeClass("pulse");
+                $("#downarrow").addClass("waves-effect waves-circle waves-light z-depth-0");
+            }
+        </script>
+        
+            <!--<div id="vercenter">HELLO</div>-->
+        <ul id="slide-out" class="side-nav">
+             <li><a href = "#home" id="menutitle" class="dosis"><center>SUDHANSHU</center></a></li>
+             <li><div class="divider"></div></li><br>
+            <li><a href="#about" class="waves-effect waves-teal">About Me</a></li>
+             <li><a href="#skills" class="waves-effect waves-teal">Skills</a></li>
+             <li><a href="#interests" class="waves-effect waves-teal">Interests</a></li>
+             <li><a href="#blog" class="waves-effect waves-teal">Blog</a></li>
+             <li><a href="#contact" class="waves-effect waves-teal">Contact Me</a></li>
+        </ul>
+        
+        <div class="full" id="home">
+        <div class="parallax-container" id="homeimg">
+            <div class="parallax">
+            </div>
+            <div id="vercenter">
+                <div class="josefin titletxt"><center>Hi! I'm Sudhanshu</center></div>
+                </div>
+            <center><a href="#about" class="btn btn-floating btn-large pulse" onclick="nopulse2()" id="downarrow"><i class="large material-icons">keyboard_arrow_down</i></a></center>
+        </div>
+            </div>
+            <!--<div class="full transparent"></div>-->
+        <div class="content_mid">
+            <div id="maindiv" class="z-depth-3">
+                
+                <div class="full" id="about">
+            <section id="vercenter"><center>
+                <span class="tiletitle">
+                    <i class="large material-icons">person_outline</i>
+                    <br>About Me</span>
+                <br><span class="tilecontent">I am a <a href="#about" class="abtlink"><span class="bluehighlight">Front End Web Developer</span></a>, <a href="#about" class="abtlink"><span class="greenhighlight">Programmer</span></a>, <a href="#about" class="abtlink"><span class="yellowhighlight">Quizzer</span></a> and a <a href="#about" class="abtlink"><span class="redhighlight">Student</span></a>.
+                <br>I am a member of <a href="https://www.mensa.org" class="abtlink" target="_blank"><span class="brownhighlight">Mensa</span></a> and a <a href="https://opensource.googleblog.com/2017/01/announcing-google-code-in-2016-winners.html" class="abtlink"><span class="purplehighlight" target="_blank">Google Code-In Grand Prize Winner</span></a>.</span>
+                </center></section>
+        </div> 
+                
+            </div>
+        </div>
+        
+        <br><br>
+        
+        <div class="content_mid">
+            <div id="maindiv" class="z-depth-3">
+                
+                <div class="full" id="skills">
+            <section id="vercenter"><center>
+                <span class="tiletitle">
+                    <i class="large material-icons">build</i>
+                    <br>Skills</span>
+                <br><div class="row">
+                <button class="waves-effect waves-red btn-large white z-depth-1 skillbtn"><span class="txtblack">Java</span></button>
+                <button class="waves-effect waves-yellow btn-large white z-depth-1 skillbtn"><span class="txtblack">C</span></button>
+                <button class="waves-effect waves-orange btn-large white z-depth-1 skillbtn"><span class="txtblack">Graphics</span></button>
+                <button class="waves-effect waves-purple btn-large white z-depth-1 skillbtn"><span class="txtblack">Quizzing</span></button>
+                <button class="waves-effect waves-green btn-large white z-depth-1 skillbtn"><span class="txtblack">CSS</span></button>
+                <button class="waves-effect waves-teal btn-large white z-depth-1 skillbtn"><span class="txtblack">HTML</span></button>
+                <button class="waves-effect waves-red btn-large white z-depth-1 skillbtn"><span class="txtblack">JS</span></button>
+                <button class="waves-effect waves-teal btn-large white z-depth-1 skillbtn"><span class="txtblack">Hardware Development in Arduino</span></button>
+                </div></section>
+                
+        </div>         
+            </div>
+        </div>
+        
+        <br><br>
+            
+        <div class="content_mid">
+            <div id="maindiv" class="z-depth-3">
+                
+                <div class="full" id="interests">
+            <section id="vercenter"><center>
+                <span class="tiletitle">
+                    <i class="large material-icons">rowing</i>
+                    <br>Interests</span>
+                <br><div class="row">
+                <button class="waves-effect waves-red btn-large white z-depth-1 skillbtn"><span class="txtblack">Designing</span>
+                    <i class="material-icons left txtblack">brush</i></button>
+                <button class="waves-effect waves-yellow btn-large white z-depth-1 skillbtn"><span class="txtblack">Coding</span>
+                    <i class="material-icons left txtblack">code</i><</button>
+                <button class="waves-effect waves-orange btn-large white z-depth-1 skillbtn"><span class="txtblack">Mathematics</span>
+                    <i class="material-icons left txtblack">school</i><</button>
+                <button class="waves-effect waves-purple btn-large white z-depth-1 skillbtn"><span class="txtblack">Quizzing</span>
+                    <i class="material-icons left txtblack">wb_incandescent</i><</button>
+                <button class="waves-effect waves-green btn-large white z-depth-1 skillbtn"><span class="txtblack">Robotics</span>
+                    <i class="material-icons left txtblack">android</i><</button>
+                </div></section>
+                
+        </div>         
+            </div>
+        </div>
+        
+        <br><br>
+                
+                <div class="content_mid">
+            <div id="maindiv" class="z-depth-3">
+                
+                <div class="full" id="blog">
+            <section id="vercenter"><center>
+                <span class="tiletitle">
+                    <i class="large material-icons">cloud_upload</i>
+                    <br>Blog Comming Up!</span>
+                <br><div class="row">
+                </section>
+                
+        </div>         
+            </div>
+        </div>
+        
+        <br><br>
+                
+                <div class="content_mid">
+            <div id="maindiv" class="z-depth-3">
+                
+                <div class="full" id="contact">
+            <section id="vercenter">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYJdqDwYnv0f_xxeqSs8A2gihbfB1bqH6EGR41Bn7rUzK1TA/viewform?embedded=true" id="contactform" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                </section>
+                
+        </div>         
+            </div>
+        </div>
+        
+        <br><br>
+        
+                
+            <div id="footerdiv" class="z-depth-3">
+               <div class="content_mid"> 
+                <div class="full" id="contact">
+            <section id="vercenter">
+                
+                <button class="btn white z-depth-0 waves-effect footerbtn"><span class="txtblack">&copy; 2017 Sudhanshu Agarwal</span></button>
+                </section>
+                
+        </div>         
+            </div>
+        </div>
+    
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large button-collapse teal pulse" data-activates="slide-out" onclick="nopulse1()" id="menubtn">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </body>
+</html>
