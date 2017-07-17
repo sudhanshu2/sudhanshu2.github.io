@@ -4,14 +4,14 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type= "text/css" href="qc.css">
-    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen, projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen, projection"/>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <meta name="theme-color" content="#3EB151">
             
     </head>
     <body>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
-        <script type="text/javascript" src="/js/materialize.min.js"> </script>
+        <script type="text/javascript" src="js/materialize.min.js"> </script>
         <script type="text/javascript">
             $( document ).ready(function(){
                 $('.parallax').parallax();
@@ -64,14 +64,140 @@
                 <div class="content_mid">
                     <div class="nav-wrapper">
                         <a href="#!" class="brand-logo"><img src="images/logo.png" id="qclogo"></a>
+                        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="qc.html" class="topitem waves-effect waves-green">Home</a></li>
+                            <li><a href="about.html" class="topitem waves-effect waves-green">About</a></li>
+                            <li><a href="induction.html" class="topitem waves-effect waves-green">Inductions</a></li>
+                            <li><a href="ir17.html" class="topitem waves-effect waves-green">Infinitus Reus</a></li>
+                            <li><a href="members.html" class="topitem waves-effect waves-green">Members</a></li>
+                            <li><a href="contactus.html" class="topitem waves-effect waves-green">Contact Us</a></li>
+                        </ul>
                     </div>
                 </div>
             </nav>
         </div>
         
+        <ul id="slide-out" class="side-nav">
+            <li><a href="qc.html" class="mobileitem waves-effect waves-green">Home</a></li>
+            <li><a href="about.html" class="mobileitem waves-effect waves-green">About</a></li>
+            <li><a href="induction.html" class="mobileitem waves-effect waves-green">Inductions</a></li>
+            <li><a href="ir17.html" class="mobileitem waves-effect waves-green">Infinitus Reus</a></li>
+            <li><a href="members.html" class="mobileitem waves-effect waves-green">Members</a></li>
+            <li><a href="contactus.html" class="mobileitem waves-effect waves-green">Contact Us</a></li>
+        </ul>
+        
         <div class="notfull">
             <div class="vercenter">
-                <center><span id="hometxt">Sorry! We are down for maintenance</span></center>
+                <center><span id="hometxt" class="josefins">Hi! We're the <span class="txtgreen">Quizzing Club</span></span></center>
+            </div>
+        </div>
+        
+        <div style="height: 10%;"></div>
+        
+        <div class="mainsec">
+            <div class="content_mid">
+                <br>
+                <center><span class="topictxt">About <span class="txtgreen">Us</span></span></center> 
+                <br>
+                <span class="abttxt">The Quizzing Club of Delhi Public School, R.K. Puram came into existence in 1983, the first club to come up in the school. Thirty years later, it is still one of the most prestigious clubs/societies of the school. From winning the very first Columban Open Quiz in '87 to winning the MOD FLAMES Quiz in 2013, the club has had an amazingly great journey. DPS, R.K. Puram's Quizzing Club is still a force to reckon with at quizzes not only at the city level, but at the national level as well. The club was, is and hopefully will remain one of the most successful of Quizzing Societies and Clubs in India.</span>
+                <br>
+                <br>
+                <div class="divider"></div>
+                <br>
+                <center><span class="topictxt"><span class="txtgreen">Infinitus Reus</span> is back</span></center> 
+                <br>
+                <br>
+                    <div class="row">
+                        <div class="col s4 somegap">
+                            <div class="center promo">
+                                <i class="material-icons large txtgreen">group_add</i>
+                                <p class="promo-caption">It's Bigger</p>
+                                <p class="light center hide-on-small-only">Over 30+ schools and 400+ participants</p>
+                            </div>
+                        </div>
+                        <div class="col s4 somegap">
+                            <div class="center promo">
+                                <i class="material-icons large txtgreen">thumb_up</i>
+                                <p class="promo-caption">It's Better</p>
+                                <p class="light center hide-on-small-only">Renowned Quizmaster XYZ</p>
+                            </div>
+                        </div>
+                        <div class="col s4 somegap">
+                            <div class="center promo">
+                                <i class="material-icons large txtgreen">domain</i>
+                                <p class="promo-caption">It's Back</p>
+                                <p class="light center hide-on-small-only">More than just a general quiz</p>
+                            </div>
+                        </div>
+                    </div>   
+                <br>
+                <center>
+                    <a class="waves-effect waves-light btn-large" id="regbtn" href="ir17.html">Learn More About Infinitus Reus</a>
+                </center>
+                <br>
+                <div class="divider"></div>
+                 <br>
+                <center><span class="topictxt">We are <span class="txtgreen">inducting</span>. Yay!</span></center> 
+                <br>
+                <br>
+                    <div class="row">
+                        <div class="col s4 somegap">
+                            <div class="center promo">
+                                <i class="material-icons large txtgreen">school</i>
+                                <p class="promo-caption">Class 8-11</p>
+                            </div>
+                        </div>
+                        <div class="col s4 somegap">
+                            <div class="center promo">
+                                <i class="material-icons large txtgreen">event_note</i>
+                                <p class="promo-caption">Check back later</p>
+                            </div>
+                        </div>
+                        <div class="col s4 somegap">
+                            <div class="center promo">
+                                <i class="material-icons large txtgreen">access_time</i>
+                                <p class="promo-caption">2:00 PM to 3:00 PM</p>
+                            </div>
+                        </div>
+                    </div>   
+                <br>
+                <center>
+                    <a class="waves-effect waves-light btn-large" id="regbtn" href="induction.html">Learn More About Inductions</a>
+                </center>
+                <br>
+                <div class="divider"></div>
+                 <br>
+                <center><span class="topictxt"><span class="txtgreen">Faculty</span></span></center> 
+                <br>
+                 <div class="row">
+                        <div class="col s6 somegap">
+                            <div class="center promo">
+                                <img src="images/suchitra%20ma'am.png" style="border-radius: 100%; width: 15vh; height: 15vh;">
+                                <p class="promo-caption">Mrs Suchitra Radhakrishnan</p>
+                            </div>
+                        </div>
+                        <div class="col s6 somegap">
+                            <div class="center promo">
+                                <img src="images/principal.jpeg" style="border-radius: 100%; width: 15vh; height: 15vh;">
+                                <p class="promo-caption">Mrs Vanita Sehgal</p>
+                            </div>
+                        </div>
+                    </div> 
+                <br>
+                <div class="divider"></div>
+                <br>
+                <center>
+                    <a class="waves-effect waves-light btn-large" id="regbtn" href="members.html">See members</a>
+                </center>
+                <br>
+                <div class="divider"></div>
+                <br>
+                <center>
+                    <a class="waves-effect waves-light btn-large" id="fbbtn" href="https://www.facebook.com/QCDPSRKP/" target="_blank">Like us on Facebook</a>
+                    <a class="waves-effect waves-light btn-large" id="regbtn" href="contactus.html">Contact Us</a>
+                </center>
+                <br>
             </div>
         </div>
         <div style="height: 10%; width: 100%; background-color: #3EB151;">
