@@ -2,12 +2,12 @@
    font-family: 'Material Icons';
    font-style: normal;
    font-weight: 400;
-   src: url(/fonts/iconfont/MaterialIcons-Regular.eot);
+   src: url(fonts/iconfont/MaterialIcons-Regular.eot);
    src: local('Material Icons'),
         local('MaterialIcons-Regular'),
-        url(/fonts/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-        url(/fonts/iconfont/MaterialIcons-Regular.woff) format('woff'),
-        url(/fonts/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+        url(fonts/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+        url(fonts/iconfont/MaterialIcons-Regular.woff) format('woff'),
+        url(fonts/iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
 
 .material-icons {
@@ -135,9 +135,12 @@ body {
 
 .crdtxt {
     font-size: 90% !important;
+    color: #000000 !important;
     font-weight: 200 !important;
 }
 
-.memcard {
-    padding: 1% !important;
+.crdtxtsm {
+    font-size: 82% !important;
+    color: #000000 !important;
+    font-weight: 200 !important;
 }
