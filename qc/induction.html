@@ -14,7 +14,6 @@
         <script type="text/javascript" src="js/materialize.min.js"> </script>
         <script type="text/javascript">
             $( document ).ready(function(){
-                $('.parallax').parallax();
                 $('.button-collapse').sideNav({
                      menuWidth: 300,
                      edge: 'left', 
@@ -22,23 +21,6 @@
                      draggable: true 
                  }
                 );
-                $('.scrollspy').scrollSpy();
-            });
-        </script>
-           
-        <script>
-            $(document).ready(function(){
-                $("a").on('click', function(event) {
-                    if (this.hash !== "") {
-                        event.preventDefault();
-                        var hash = this.hash;
-                        $('html, body').animate({
-                            scrollTop: $(hash).offset().top
-                        }, 800, function(){
-                            window.location.hash = hash;
-                        });
-                    } 
-                });
             });
         </script>
         
