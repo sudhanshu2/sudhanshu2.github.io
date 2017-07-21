@@ -14,7 +14,6 @@
         <script type="text/javascript" src="js/materialize.min.js"> </script>
         <script type="text/javascript">
             $( document ).ready(function(){
-                $('.parallax').parallax();
                 $('.button-collapse').sideNav({
                      menuWidth: 300,
                      edge: 'left', 
@@ -22,26 +21,9 @@
                      draggable: true 
                  }
                 );
-                $('.scrollspy').scrollSpy();
             });
         </script>
-           
-        <script>
-            $(document).ready(function(){
-                $("a").on('click', function(event) {
-                    if (this.hash !== "") {
-                        event.preventDefault();
-                        var hash = this.hash;
-                        $('html, body').animate({
-                            scrollTop: $(hash).offset().top
-                        }, 800, function(){
-                            window.location.hash = hash;
-                        });
-                    } 
-                });
-            });
-        </script>
-        
+ 
          <div class="navbar-fixed">
             <nav id="topnav" class="backwhite">
                 <div class="content_mid">
@@ -75,20 +57,42 @@
         <br>
         
         <div class="content_mid">
+            <div class="mainsec">
+                <center>
+                    <a class="waves-effect waves-light btn-large" id="fbbtn" href="https://www.facebook.com/QCDPSRKP/" target="_blank">Facebook</a>
+                    <a class="waves-effect waves-light btn-large disabled" id="regbtn" href="contactus.html">
+                        <i class="material-icons">mail</i>
+                    </a>
+                </center>
+                <br>
+            </div>
+        </div>
+        <br>
+        <div class="content_mid">
             <div class="card">
                 <div class="card-content">
-                    <div style="height: 70%;">
-                        <div class="abttxt vercenter">
-                            <center>
-                                <i class="material-icons large txtgreen">backup</i>
-                                <br>
-                                Page coming up!
-                            </center>
-                        </div>
+                    <div class="abttxt">
+                        Delhi Public School<br> Sector XII, R. K. Puram New Delhi - 110022
+                        <br>+91 (011) 26171267
                     </div>
                 </div>
             </div>
         </div>
+        <br>
+        <div class="content_mid">
+            <div class="card">
+                <div class="card-content"  id="contactform">
+                    <div class="abttxt vercenter">
+                            <center>
+                                <i class="material-icons large txtgreen">mood</i>
+                                <br>
+                                Check back later!
+                            </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
         <div style="height: 10%; width: 100%; background-color: #FFFFFF;">
             <div class="vercenter content_mid">
                 <div class="foottxt">&copy Quizzing Club 2017. Developed by Sudhanshu Agarwal</div>
