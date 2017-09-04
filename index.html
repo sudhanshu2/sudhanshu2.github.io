@@ -1,0 +1,330 @@
+<html lang="en">
+    <head>
+        <title>Sudhanshu Agarwal's Blog</title>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen, projection"/>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/css" rel="stylesheet" href="imagelink.css">
+        <meta name="theme-color" content="#0D47A1">
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="post.js"></script>
+        <script type="text/javascript">
+            $( document ).ready(function(){
+                $('.parallax').parallax();
+                $('.button-collapse').sideNav({
+                     menuWidth: 300,
+                     edge: 'right', 
+                     closeOnClick: true, 
+                     draggable: true 
+                 }
+                );
+                $('.scrollspy').scrollSpy();
+                $('.modal').modal();
+            });
+        </script>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-97180729-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+        <script>
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function(){
+                            window.location.hash = hash;
+                        });
+                    } 
+                });
+            });
+        </script>   
+        
+        <script>
+            function github_hover() {
+                $('#github-black').addClass('notshow');
+                $('#github-pink').removeClass('notshow');
+            } 
+            
+            function github_unhover() {
+                $('#github-pink').addClass('notshow');
+                $('#github-black').removeClass('notshow');
+            }
+            
+            function qc_hover() {
+                $('#qc-black').addClass('notshow');
+                $('#qc-green').removeClass('notshow');
+            } 
+            
+            function qc_unhover() {
+                $('#qc-green').addClass('notshow');
+                $('#qc-black').removeClass('notshow');
+            }
+            
+            function brlcad_hover() {
+                $('#brlcad-black').addClass('notshow');
+                $('#brlcad-pink').removeClass('notshow');
+            } 
+            
+            function brlcad_unhover() {
+                $('#brlcad-pink').addClass('notshow');
+                $('#brlcad-black').removeClass('notshow');
+            }
+            
+            var load_time;
+            
+            function showPage() {
+                document.getElementById("page-loader").style.display = "none";
+                document.getElementById("page-content").style.display = "block";
+            }
+            
+            function waitForElement(id, callback){
+                var loaded_element = setInterval(function(){
+                    if(document.getElementById(id)){
+                        clearInterval(loaded_element);
+                        callback();
+                    }
+                }, 1);
+            }
+            
+            waitForElement("page-content", function(){
+                load_time = setTimeout(showPage, 1);
+            });
+            
+            var postno;
+            function gotopost(postno) {
+                url = 'post.html?no=' + postno;
+                document.location.href = url;
+            }
+            
+            var linker;
+            
+            function linkit(linker) {
+                window.location.href = linker;
+            }
+            
+            function modalit(linker) {
+                $(linker).modal('open');
+            }
+            
+        </script>
+    </head>
+    
+    <body onload="waitForElement()">
+        <div class="full" id="page-loader">
+            <div class="vercenter center">
+                <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <span class="lato black-text" style="font-size: 120%;">LOADING....</span>
+            </div>
+        </div>
+            
+        <div id="page-content" class="animate-bottom">
+        <div class="navbar-fixed" style="bottom: 0px;">
+            <nav class="nav-main" style="background-color: rgba(255, 255, 255, 0.95) !important;">
+                <div class="nav-wrapper">
+                    <a href="#top" class="brand-logo black-text center lato">SUDHANSHU'S BLOG</a>
+                </div>
+            </nav>
+        </div>
+            
+            <div id="top"></div>
+        
+        <div class="img-top" style="position: relative;">
+            <div class="vercenter pacifico" id="hi-text">
+                <center>
+                    Hi!
+                </center>
+                </div>
+                <div class="chip" style="position: absolute; bottom: 1%; right: 1%; opacity: 0.2; background-color: transparent; color: #FFFFFF;">
+                    Tamalpais-Homestead Valley, CA &copy; Sudhanshu Agarwal
+                </div>
+        </div>          
+        
+         <!-- <div class="content-mid">
+          <div class="card hoverable" style="width: 100%;">
+              <div class="post-title lato" style="background-color: #1E88E5; color: #FFFFFF"><center>My Google Code-in 2016 Experience</center></div>
+              <div class="post-int lato">
+                 Programming was not the reason I liked opening my computer every day after school in third grade, it was playing games, but when I learnt my first programming language, the first thing to be removed from my computer was games. I started programming in the seventh grade when I started learning Visual Basic. I liked the simplicity and the ease with which I could develop a usable software. My first piece of usable software was a controller software for a robot I had made. It was amazing to see that robot move around the room. I learned C in the ninth grade and have progressively learned new programming languages since then. Now, I have started to learn Go. The reason I am learning Go has a lot to do with GCI. I got a Gopher during the GCI Winner&#39;s Trip which I keep on my desk and it has inspired me to learn Go! I first took part in GCI 2015 when I tried to do my first task in the last week of the contest. I could not complete that task because it took me a lot of time to get the hang of git. 
+              </div>
+              
+              <div class="post-date lato">
+                  <div class="chip">
+                      <img src="images/profile.jpg" alt="Contact Person">
+                      Sudhanshu Agarwal
+                  </div>
+                  <div class="chip">
+                      2 September 2017
+                  </div>
+                   <center class="hide-on-med-and-up">
+                      <a class="waves-effect waves-dark btn white black-text" style="margin-top: 3vh;">READ MORE</a>
+                  </center>
+                  <a class="waves-effect waves-dark btn right white black-text hide-on-small-only">READ MORE</a>
+              </div> 
+          </div>
+        </div>
+        <br> -->
+        
+         <div class="content-mid">
+          <div class="card hoverable" style="width: 100%;">
+              <div class="post-title lato img2cover img-title" style="color: #FFFFFF"><center>Hello World!</center></div>
+              <div class="post-int lato">
+                  Hello World! I am starting a blog designed using Materialize CSS and hosted on GitHub pages. I will usually post random or science stuff. I will usually update it every fornight. I will start it by writing about my Google Code-in 2016 experience.
+                  <pre><code class="language-css">cout&lt;&lt;&quot;Hello World&quot;&#59;</code></pre>
+              </div>
+              
+              <div class="post-date lato">
+                  <div class="chip">
+                      <img src="images/profile.jpg" alt="Contact Person">
+                      Sudhanshu Agarwal
+                  </div>
+                  <div class="chip">
+                      3 September 2017
+                  </div>
+                   <center class="hide-on-med-and-up">
+                      <a class="waves-effect waves-dark btn white black-text" style="margin-top: 3vh;" onclick="gotopost(2);">READ MORE</a>
+                  </center>
+                  <a class="waves-effect waves-dark btn right white black-text hide-on-small-only" onclick="gotopost(2);">READ MORE</a>
+              </div> 
+          </div>
+        </div>
+        <br>
+        
+        <div class="content-mid">
+          <div class="card hoverable" style="width: 100%;">
+              <div class="post-title lato img1cover img-title" style="color: #FFFFFF"><center>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</center></div>
+              <div class="post-int lato">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida, at auctor odio finibus. Sed pellentesque est tincidunt, dictum ligula congue, egestas dui. Proin tortor urna, gravida et fringilla hendrerit, venenatis eu nibh. Integer sodales varius ante, in scelerisque mi tristique non. Ut dapibus, purus non aliquet tempus, mauris magna varius nisi, eget placerat neque turpis sed magna. Maecenas ipsum dolor, imperdiet at suscipit eget, fringilla quis nisl. Integer pharetra elementum tempor. Praesent sollicitudin erat eget nisi ultricies lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi eu diam at ligula molestie molestie.
+              </div>
+              
+              <div class="post-date lato">
+                  <div class="chip">
+                      <img src="images/profile.jpg" alt="Contact Person">
+                      Sudhanshu Agarwal
+                  </div>
+                  <div class="chip">
+                      2 September 2017
+                  </div>
+                  <center class="hide-on-med-and-up">
+                      <a class="waves-effect waves-dark btn white black-text" style="margin-top: 3vh;" onclick="gotopost(1);">READ MORE</a>
+                  </center>
+                  <a class="waves-effect waves-dark btn right white black-text hide-on-small-only" onclick="gotopost(1);">READ MORE</a>
+              </div> 
+          </div>
+        </div>
+
+        <footer class="page-footer" style="background-color: #0D47A1;">
+          <div class="footer-copyright" style="background-color: #FFFFFF; color: #000000;">
+            <div class="container lato">
+            &copy; 1999 - 2017 Sudhanshu Agarwal. 
+                <br>Developed with <a href="http://materializecss.com" style="color: #0288d1;" target="_blank">Materialize CSS</a>. Code available on <a href="https://github.com/sudhanshu2/sudhanshu2.github.io" style="color: #0288d1;" target="_blank">GitHub</a> under <a href="https://opensource.org/licenses/MIT" style="color: #0288d1;" target="_blank">MIT License</a>.
+            </div>
+          </div>
+        </footer>
+        
+        <div class="fixed-action-btn">
+            <a class="btn-large white hoverable">
+                <i class="material-icons black-text" style="padding-right: 3vh;" id="about-contact" onmousedown="modalit('#modalabout')">account_circle</i>
+                <i class="material-icons black-text" style="padding-right: 3vh;" id="mail-contact" onmousedown="modalit('#modalcontact')">mail_outline</i>
+                <img src="images/github.png" class="contact-logo" style="padding-right: 3vh;" id="github-black" onmouseover="github_hover();" onmousedown="linkit('https://github.com/sudhanshu2')">
+                <img src="images/github-pink.png" class="contact-logo notshow" style="padding-right: 3vh;" id="github-pink" onmouseout="github_unhover()" onmousedown="linkit('https://github.com/sudhanshu2')">
+                <img src="images/qc-black.png" class="contact-logo" id="qc-black" style="padding-right: 3vh;" onmouseover="qc_hover();" onmousedown="linkit('https://sudhanshu2.github.io/qc/qc.html')">
+                <img src="images/qc-green.png" class="contact-logo notshow" style="padding-right: 3vh;" id="qc-green" onmouseout="qc_unhover()" onmousedown="linkit('https://sudhanshu2.github.io/qc/qc.html')">
+                <img src="images/brlcad.png" class="contact-logo" id="brlcad-black" onmouseover="brlcad_hover();" onmousedown="linkit('https://sudhanshu2.github.io/qc/qc.html')">
+                <img src="images/brlcad-pink.png" class="contact-logo notshow" id="brlcad-pink" onmouseout="brlcad_unhover()" onmousedown="linkit('https://sudhanshu2.github.io/qc/qc.html')">
+            </a>
+        </div>
+        </div>
+        
+        <div id="modalcontact" class="modal">
+            <div class="fixed-action-btn"  style="margin: 2% !important;">
+                <a class="btn-floating waves-effect waves-light modal-action modal-close red">
+                    <i class="large material-icons white-text">close</i>
+                </a>
+            </div>
+            <div class="modal-content">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYJdqDwYnv0f_xxeqSs8A2gihbfB1bqH6EGR41Bn7rUzK1TA/viewform?embedded=true" width="100%" height="90%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </div>
+        </div>
+        
+        <div id="modalabout" class="modal">
+            <div class="modal-content">
+                <div class="lato" style="color: #000000; font-size: 125%;">Hello! I am Sudhanshu Agarwal. 
+                <br>I am a Google Code-in 2016 Grand Prize Winner. 
+                <br>My interests include Quizzing, Mathematics and Programming. When I am not doing either of these, you will find me reading a book or playing guitar.
+                <br>If you want to contact me, use the mail icon in the bottom right corner of the screen. 
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-dark btn-flat" style="color: #000000; font-size: 105%;">Close</a>
+            </div>
+        </div>
+    </body>
+</html>
