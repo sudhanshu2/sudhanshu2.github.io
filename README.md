@@ -4,4 +4,4 @@ Available under <a href="https://opensource.org/licenses/MIT" target="_blank">MI
 
 <hr>
 
-All images and text are &copy;2017 Sudhanshu Agarwal
+All images and text are &copy; 2017 Sudhanshu Agarwal
