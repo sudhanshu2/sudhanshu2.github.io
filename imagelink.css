@@ -1,40 +1,16 @@
 .img1cover {
-    background-image: url("images/posts/cover1.png") !important;
-}
-
-.img1auth {
-     content:url("images/profile.jpg");
+    background-image: url("images/posts/cover1.png");
 }
 
 /*---------------------------------------------------*/
 
 .img2cover {
-    background-image: url("images/posts/cover2.jpg") !important;
-}
-
-.img2auth {
-     content:url("images/profile.jpg");
+    background-image: url("images/posts/cover2.jpg");
 }
 
 /*---------------------------------------------------*/
 
 .img3cover {
-    background-image: url("images/posts/oakland-bridge.png") !important;
-}
-
-.img3auth {
-     content:url("images/profile.jpg");
-}
-
-.img31 {
-    background-image: url("images/main-photo.png");
-}
-
-.img32 {
-    background-image: url("images/main-photo.png");
-}
-
-.img33 {
-    background-image: url("images/main-photo.png");
+    background-image: url("images/posts/cover3.jpg");
 }
 
