@@ -1,0 +1,151 @@
+@font-face {
+   font-family: 'Material Icons';
+   font-style: normal;
+   font-weight: 400;
+   src: url(fonts/iconfont/MaterialIcons-Regular.eot);
+   src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(fonts/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+        url(fonts/iconfont/MaterialIcons-Regular.woff) format('woff'),
+        url(fonts/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; 
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+.content-mid {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.full {
+    height: 100%;
+    width: 100%;
+}
+
+.vercenter {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+
+
+.opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.josefin {
+    font-family: 'Josefin Slab', serif;
+}
+
+.poiret {
+    font-family: 'Poiret One', cursive;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #E8E8E8;
+    background-size: cover;                      
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.static-img {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 50%;
+    width: 100%;
+}
+
+#page-title {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 75%;
+    width: 100%;
+    font-size: 210%;
+    letter-spacing: 6;
+    color: #FFFFFF;
+}
+
+.parallax-post {
+    position: absolute; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    height: 100%; 
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.post-title {
+    font-size: 160%;
+    letter-spacing: normal
+}
+
+.post-intro {
+    font-size: 120%;
+}
+
+.post-btn {
+    background-color: #646464; 
+    color: #FFFFFF;
+}
+
+.page-foot {
+    width: 100%; 
+    height: 8%; 
+    background-color: #E8E8E8;
+}
+
+#contact-me:hover {
+    color: #FFAB00;
+}
+
+.noshow {
+    display: none;
+}
+
+#nav-top {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 0px;
+}
+
+.brand-logo {
+    font-size: 130% !important;
+    letter-spacing: 5;
+}
+
+.padtop {
+    padding-top: 4% !important;
+}
+
+.padbot {
+    padding-bottom: 4% !important;
+}
