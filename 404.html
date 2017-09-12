@@ -4,17 +4,18 @@
 ---
 <html lang="en">
     <head>
-        <title>Sudhanshu Agarwal's Blog</title>
+        <title>Sudhanshu's Blog</title>
     
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen, projection"/>
-        <link type="text/css" rel="stylesheet" href="style.css">
-        <meta name="theme-color" content="#0D47A1">
+        <link type="text/css" rel="stylesheet" href="index.css">
+        <meta name="theme-color" content="#FFFFFF">
         
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
-        <script type="text/javascript" src="js/materialize.min.js"> </script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="post.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -24,103 +25,15 @@
             ga('create', 'UA-97180729-1', 'auto');
             ga('send', 'pageview');
         </script>
-        <script>
-             var load_time;
-            
-            function showPage() {
-                document.getElementById("page-loader").style.display = "none";
-                document.getElementById("page-content").style.display = "block";
-            }
-            
-            function waitForElement(id, callback){
-                var loaded_element = setInterval(function(){
-                    if(document.getElementById(id)){
-                        clearInterval(loaded_element);
-                        callback();
-                    }
-                }, 1);
-            }
-            
-            waitForElement("page-content", function(){
-                load_time = setTimeout(showPage, 1);
-            });
-            
-        </script>
     </head>
-    <body onload="waitForElement()">
-        <div class="full" id="page-loader">
-            <div class="vercenter center">
-                <div class="preloader-wrapper big active">
-                    <div class="spinner-layer spinner-blue">
-                        <div class="circle-clipper left">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="gap-patch">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="circle-clipper right">
-                            <div class="circle"></div>
-                        </div>
-                    </div>
-
-                    <div class="spinner-layer spinner-red">
-                        <div class="circle-clipper left">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="gap-patch">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="circle-clipper right">
-                            <div class="circle"></div>
-                        </div>
-                    </div>
-
-                    <div class="spinner-layer spinner-yellow">
-                        <div class="circle-clipper left">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="gap-patch">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="circle-clipper right">
-                            <div class="circle"></div>
-                        </div>
-                    </div>
-
-                    <div class="spinner-layer spinner-green">
-                        <div class="circle-clipper left">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="gap-patch">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="circle-clipper right">
-                            <div class="circle"></div>
-                        </div>
-                    </div>
-                </div>
-                <br><br>
-                <span class="lato black-text" style="font-size: 120%;">LOADING....</span>
-            </div>
-        </div>
-        
-        <div id="page-content" class="animate-bottom vercenter">            
-            <div class="img-top" style="position: relative; background-image: url('images/posts/cover2.jpg') !important; height: 40%;">
-            <div class="vercenter lato" id="hi-text" style="font-size: 270% !important;">
-                <center>
-                    404 : Page Not Found
-                </center>
-                </div>
-                <div class="chip" style="position: absolute; bottom: 1%; right: 1%; opacity: 0.2; background-color: transparent; color: #FFFFFF;">
-                    San Francisco&#45;Oakland Bay Bridge, CA &copy; Sudhanshu Agarwal
-                </div>
-            </div>  
-            <br>
-            <center>
-                <a class="waves-effect waves-dark btn white black-text" href="https://sudhanshu2.github.io/" target="_blank">Go to Sudhanshu's Blog</a>
-                <br><br>
-                <a class="waves-effect waves-dark btn green white-text" href="https://sudhanshu2.github.io/qc/qc.html" target="_blank">Go to Quizzing Club Website</a>
+    <body> 
+        <div id="page-title">
+            <center class="vercenter lato" style="font-size: 150%;">
+                404 : Page Not Found
+                <br><br><br>
+                <a class="waves-effect waves-dark btn white black-text" href="https://sudhanshu2.github.io/" target="_blank" style="margin-bottom: 5%;">Go to Sudhanshu's Blog</a>
+                <a class="waves-effect waves-dark btn green white-text" href="https://sudhanshu2.github.io/qc/qc.html" target="_blank" style="margin-bottom: 5%;">Go to Quizzing Club Website</a>
             </center>
-        </div>    
+        </div>
     </body>
 </html>
