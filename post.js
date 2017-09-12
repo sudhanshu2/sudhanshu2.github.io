@@ -103,7 +103,7 @@ var postobj = [
     {
       date: '27 August 2017',
       number: 5,
-      title: 'History of BRL-CAD<',
+      title: 'History of BRL-CAD',
 
       para1: 'Post coming up!',
       para2: '',
