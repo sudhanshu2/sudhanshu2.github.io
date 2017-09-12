@@ -78,14 +78,14 @@ var postobj = [
     {
       date: '20 August 2017',
       number: 4,
-      title: 'My trip to LA',
+      title: 'Adios LA',
         
       para1: 'Post coming up!',
       para2: '',
       para3: '',
       para4: '',
       coverphoto: 'img4cover',
-      coverphototxt: 'USC, LA, CA &copy; Sudhanshu Agarwal',
+      coverphototxt: 'LAX, CA &copy; Sudhanshu Agarwal',
       photo1: 'noshow',
       photo1txt: '',
       photo2: 'noshow',
@@ -103,7 +103,7 @@ var postobj = [
     {
       date: '27 August 2017',
       number: 5,
-      title: 'My Infinitus Reus 2017 Experience',
+      title: 'BRL-CAD 101',
         
       para1: 'Post coming up!',
       para2: '',
