@@ -8,9 +8,36 @@
     background-image: url("images/posts/cover2.jpg");
 }
 
+.img24 {
+    background-image: url("images/posts/img24.jpg");
+}
+
 /*---------------------------------------------------*/
 
 .img3cover {
     background-image: url("images/posts/cover3.jpg");
 }
 
+/*---------------------------------------------------*/
+
+.img4cover {
+    background-image: url("images/posts/cover4.jpg");
+}
+
+/*---------------------------------------------------*/
+
+.img5cover {
+    background-image: url("images/posts/cover5b.jpg");
+}
+
+/*---------------------------------------------------*/
+
+.img6cover {
+    background-image: url("images/posts/cover6.jpg");
+}
+
+/*---------------------------------------------------*/
+
+.img7cover {
+    background-image: url("images/posts/cover7.jpg");
+}
