@@ -1,0 +1,205 @@
+<html lang="en">
+    <head>
+        <title>Sudhanshu's Blog</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen, projection"/>
+        <link type="text/css" rel="stylesheet" href="index.css">
+        <link type="text/css" rel="stylesheet" href="imagelink.css">
+        <meta name="theme-color" content="#FFFFFF">
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="post.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-97180729-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+    <body>
+        
+      <script>
+            $(document).ready(function(){
+               var song = document.getElementById("song-audio");
+               song.onerror = function() {
+                   document.getElementById("load-txt").innerHTML = "AUDIO COULD NOT BE LOADED. IF YOU ARE USING INTERNET EXPLORER 9 OR BELOW, PLAYBACK IS NOT SUPPORTED.";
+               };
+               song.oncanplaythrough = function() {
+                   $("#load-cont").fadeOut();
+                   $("#load-cont").addClass("noshow");
+                   $("#song-img").fadeIn();
+                   $("#song-img").removeClass("noshow");
+                   $("#main-cont").fadeIn();
+                   $("#main-cont").removeClass("noshow");
+                   document.getElementById("song-time").value = 0;
+                   document.getElementById("song-vol").value = 1;
+                   document.getElementById("rightnow").innerHTML = "00 : 00";
+                   var minutes;
+                   var seconds = song.duration;
+                   document.getElementById("song-time").max = seconds;
+                   minutes = Math.floor(seconds / 60);
+                   minutes = (minutes >= 10) ? minutes : "0" + minutes;
+                   seconds = Math.floor(seconds % 60);
+                   seconds = (seconds >= 10) ? seconds : "0" + seconds;
+                   document.getElementById("totaltime").innerHTML = minutes + ":" + seconds;
+               };
+            });
+            
+            function playsong() {
+                var song = document.getElementById("song-audio");
+                song.play();
+                $("#btn-play").addClass("noshow");
+                $("#btn-pause").removeClass("noshow");
+                $("#btn-stop").removeClass("noshow");
+                $("#btn-forward").removeClass("noshow");
+            }
+            
+            function pausesong() {
+                var song = document.getElementById("song-audio");
+                song.pause();
+                $("#btn-play").removeClass("noshow");
+                $("#btn-pause").addClass("noshow");
+            }
+            
+            function showtime() {
+                var song = document.getElementById("song-audio");
+                var minutes;
+                var seconds = song.currentTime;
+                if(seconds == song.duration) {
+                    var song = document.getElementById("song-audio");
+                    song.pause();
+                    $("#btn-play").removeClass("noshow");
+                    $("#btn-pause").addClass("noshow");
+                }
+                document.getElementById("song-time").value = seconds;
+                minutes = Math.floor(seconds / 60);
+                minutes = (minutes >= 10) ? minutes : "0" + minutes;
+                seconds = Math.floor(seconds % 60);
+                seconds = (seconds >= 10) ? seconds : "0" + seconds;
+                document.getElementById("rightnow").innerHTML = minutes + ":" + seconds;
+            }
+            
+            function stopsong() {
+                var song = document.getElementById("song-audio");
+                song.pause();
+                song.currentTime = 0;
+                $("#btn-play").removeClass("noshow");
+                $("#btn-pause").addClass("noshow");
+                document.getElementById("song-time").value = 0;
+            }
+            
+            function forwardsong() {
+                var song = document.getElementById("song-audio");
+                song.currentTime += 30;
+                document.getElementById("song-time").value = song.currentTime;
+                if(song.currentTime >= song.duration) {
+                    $("#btn-play").removeClass("noshow");
+                    $("#btn-pause").addClass("noshow");
+                }
+            }
+            
+            function songchange() {
+                var timenow = document.getElementById("song-time");
+                var song = document.getElementById("song-audio");
+                song.currentTime = timenow.value;
+                if(song.currentTime >= song.duration) {
+                    $("#btn-play").removeClass("noshow");
+                    $("#btn-pause").addClass("noshow");
+                }
+            }
+            
+            function volchange() {
+                var vol = document.getElementById("song-vol");
+                var song = document.getElementById("song-audio");
+                song.volume = vol.value;
+                if(song.volume <= 0) {
+                    $("#vol-mute").removeClass("noshow");
+                    $("#vol-icon").addClass("noshow");
+                } else {
+                    $("#vol-icon").removeClass("noshow");
+                    $("#vol-mute").addClass("noshow");
+                }
+            }
+            
+        </script>
+        <style>
+            
+            input[type=range]::-webkit-slider-thumb {
+                background-color: #2196f3;
+            }
+            input[type=range]::-moz-range-thumb {
+                background-color: #2196f3;
+            }
+            input[type=range]::-ms-thumb {
+                background-color: #2196f3;
+            }
+            input[type=range] + .thumb {
+                display: none;
+            }
+            input[type=range] + .thumb.active .value {
+                display: none;
+            }
+        </style>
+        
+        <div class="full">
+        <center class="vercenter">
+        <div class="col content-mid">
+            <div class="card lato"  style="max-width: 500px; width: 100%;">
+                <div class="card-images noshow" id="song-img">
+                    <div class="static-img" style="height: 40%; width: 100%; background-image: url('images/posts/cover7.jpg');"></div>
+                </div>
+                <div class="card-content">
+                    <center id="load-cont">
+                        <div class="preloader-wrapper big active">
+                            <div class="spinner-layer spinner-blue-only">
+                                <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                </div><div class="gap-patch">
+                                <div class="circle"></div>
+                                </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <span class="lato" id="load-txt">LOADING...</span>
+                    </center>
+                    <div id="main-cont" class="noshow">
+                        <i class="material-icons left vercenter" id="vol-icon">volume_up</i>
+                        <i class="material-icons left vercenter noshow" id="vol-mute">volume_mute</i>
+                        <form action="#" style="width: 20%;" class="left vercenter">
+                            <input type="range" min="0" max="1" step="0.01" onchange="volchange();" id="song-vol">
+                        </form>
+                        <p class="right vercenter"><span id="rightnow"></span> / <span id="totaltime"></span></p>
+                        <div style="height: 0px;"></div>
+                        <form action="#"><p class="range-field"><input type="range" min="0" step="1" onchange="songchange();" id="song-time"></p></form>
+                        <center>
+                            <a class="btn-floating waves-effect waves-dark red noshow" style="margin-right: 3%;" onclick="stopsong();" id="btn-stop"><i class="material-icons white-text">stop</i></a>
+                            <a class="btn-floating btn-large waves-effect waves-dark blue" onclick="playsong();" id="btn-play"><i class="material-icons large white-text">play_arrow</i></a>
+                            <a class="btn-floating btn-large waves-effect waves-dark blue noshow" onclick="pausesong();" id="btn-pause"><i class="material-icons large white-text">pause</i></a>
+                            <a class="btn-floating waves-effect waves-dark green noshow" style="margin-left: 3%;" onclick="forwardsong();" id="btn-forward"><i class="material-icons white-text">forward_30</i></a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </center>
+        </div>
+        <audio id="song-audio" ontimeupdate="showtime();"><source src="audio/tune1.mp3" type="audio/mpeg"></audio> 
+        <div class="page-foot">
+            <div class=" vercenter lato">
+                <center>&copy; 1983-2017 Quizzing Club of Delhi Public School, R. K. Puram<br>Designed by <a href="https://github.com/sudhanshu2" style="color: #000000;" target="_blank">Sudhanshu Agarwal</a></center>
+            </div>
+        </div>
+    </body>
+</html>
