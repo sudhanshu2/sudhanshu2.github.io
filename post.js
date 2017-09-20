@@ -32,7 +32,7 @@ var postobj = [
 
       para1: 'Hello World! I am starting a blog designed using Materialize CSS and hosted on GitHub pages. I will usually post random or science stuff. I will usually update it every fornight. I will start it by writing about my Google Code-in 2016 experience.',
       para2: 'I am a big fan of simplicity and material design and you can see that in this website.',
-      para3: 'Starting with a little about me, I am Sudhanshu Agarwal and Hi, it is great to meet you! I am a quizzer and a programmer and also I am deep into music.I was a Grand Prize Winner with BRL-CAD in Google Code-in 2016 but watch out for my next post for more details.I hope that you will enjoy reading the rest of the posts and please feel free to contact me via the contact me page whose link is floating in the bottom left of the website.',
+      para3: 'Starting with a little about me, I am Sudhanshu Agarwal and Hi, it is great to meet you! I am a quizzer and a programmer and also I am deep into music.I was a Grand Prize Winner with BRL-CAD in Google Code-in 2016 but watch out for my next post for more details. I hope that you will enjoy reading the rest of the posts and please feel free to contact me!',
       para4: 'Thanks for reading this!',
       coverphoto: 'img2cover',
       coverphototxt: 'San Francisco&#45;Oakland Bay Bridge, CA &copy; Sudhanshu Agarwal',
