@@ -124,7 +124,7 @@
                song.onerror = function() {
                    document.getElementById("load-txt").innerHTML = "AUDIO COULD NOT BE LOADED. IF YOU ARE USING INTERNET EXPLORER 9 OR BELOW, PLAYBACK IS NOT SUPPORTED.";
                };
-               song.oncanplay = function() {
+               song.oncanplaythrough = function() {
                    $("#load-cont").fadeOut();
                    $("#load-cont").addClass("noshow");
                    $("#song-img").fadeIn();
