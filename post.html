@@ -6,7 +6,6 @@
 
         <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen, projection"/>
         <link type="text/css" rel="stylesheet" href="post.css">
@@ -46,6 +45,9 @@
 
             $(document).ready(function(){
                 var postno = window.location.href.split('?no=').pop();
+                if(isNaN(postno)) {
+                    document.location.href = 'index.html';
+                }
                 
                 document.title = postobj[postno - 1].title + " | Sudhanshu's Blog";
 
@@ -128,9 +130,6 @@
                 } else {
                     document.getElementById("post-img4txt").innerHTML = postobj[postno - 1].photo4txt;
                 }*/
-                
-                
-                
             });
         </script>
         
@@ -147,14 +146,6 @@
 
     <body>
         <div>
-        <!--<div class="navbar-fixed" style="bottom: 0px;">
-            <nav class="nav-main" style="background-color: rgba(255, 255, 255, 0.95) !important;">
-                <div class="nav-wrapper">
-                    <a href="#top" class="brand-logo black-text center lato">SUDHANSHU'S BLOG</a>
-                </div>
-            </nav>
-        </div>-->
-            
         <div id="top"></div>
         
         

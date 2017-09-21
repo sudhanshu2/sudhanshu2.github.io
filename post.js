@@ -153,7 +153,7 @@ var postobj = [
     {
       date: '10 September 2017',
       number: 7,
-      title: '2017: A Quizzer&#39;s Review',
+      title: 'Organising IT Fest 2017',
 
       para1: 'Post coming up!',
       para2: '',
