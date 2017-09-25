@@ -51,18 +51,6 @@
 }
 
 
-.lato {
-    font-family: 'Lato', sans-serif;
-}
-
-.josefin {
-    font-family: 'Josefin Slab', serif;
-}
-
-.poiret {
-    font-family: 'Poiret One', cursive;
-}
-
 body {
     width: 100%;
     height: 100%;
@@ -79,69 +67,79 @@ body {
     background-attachment: fixed;
 }
 
-#page-title {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 100%;
+.page-title {
+    font-size: 220%;
+    color: #FFFFFF;
+    font-weight: 300;
+    letter-spacing: 5;
+}
+
+.some-shadow {
+    box-shadow: 0px 0px 20px #000000;
+}
+
+.blur {
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    -o-filter: blur(10px);
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    transition: .3s -moz-filter linear;
+    transition: .3s -ms-filter linear;
+    transition: .3s -o-filter linear;
+    transition: .3s -webkit-filter linear;
+    transition: .3s filter linear;
+}
+
+.noblur {
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -o-filter: blur(0px);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    transition: .3s -moz-filter linear;
+    transition: .3s -ms-filter linear;
+    transition: .3s -o-filter linear;
+    transition: .3s -webkit-filter linear;
+    transition: .3s filter linear;
+}
+
+
+#cover-img {
+    position: fixed;
+    background-size: cover;
+    transform: scale(1.1); 
+    position: fixed; 
+    object-fit: cover;
+    z-index: -1;
+}
+
+.gradient {
+    background: transparent; 
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), transparent); 
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.7), transparent); 
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), transparent); 
+    background: -ms-linear-gradient(rgba(0, 0, 0, 0.7), transparent); 
+    background: linear-gradient(rgba(0, 0, 0, 0.7), transparent); 
+}
+
+.black-shade {
     width: 100%;
-    font-size: 210%;
-    letter-spacing: 9;
-    color: #FFFFFF;
-}
-
-.parallax-post {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
-    width: 100%;
-    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-.post-title {
-    font-size: 160%;
+.noshadow {
+    box-shadow: 0px 0px 0px #FFFFFF;
 }
 
-.post-intro {
-    font-size: 120%;
-}
-
-.post-btn {
-    background-color: #646464;
-    color: #FFFFFF;
+.col {
+    height: 75%;
 }
 
 .page-foot {
-    width: 100%;
-    height: 8%;
-    background-color: #E8E8E8;
-}
-
-#contact-me:hover {
-    color: #FFAB00;
-}
-
-.contact-btn {
-    position: absolute;
+    height: 10%;
     bottom: 0;
-    right: 0;
-    background-color: transparent;
-    box-shadow: 0px 0px 0px;
-}
-
-.contact-btn:hover {
-    background-color: transparent;
-    box-shadow: 0px 0px 0px;
-}
-
-.noshow {
-    display: none;
-}
-
-#nav-top {
-    background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0px 0px 0px;
-}
-
-.brand-logo {
-    font-size: 130% !important;
-    letter-spacing: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
 }

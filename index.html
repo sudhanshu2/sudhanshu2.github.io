@@ -4,12 +4,8 @@
     
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen, projection"/>
         <link type="text/css" rel="stylesheet" href="index.css">
-        <link type="text/css" rel="stylesheet" href="imagelink.css">
         <meta name="theme-color" content="#FFFFFF">
         
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -17,30 +13,15 @@
         <script type="text/javascript" src="post.js"></script>
         <script type="text/javascript">
             $( document ).ready(function(){
-                $('.parallax').parallax();
                 $('.button-collapse').sideNav({
                      menuWidth: 300,
-                     edge: 'right', 
+                     edge: 'left', 
                      closeOnClick: true, 
                      draggable: true 
                  }
                 );
-                $('.scrollspy').scrollSpy();
-                $('.modal').modal();
             });
-        </script>
-        
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-97180729-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        
-        <script>
             $(document).ready(function(){
                 $("a").on('click', function(event) {
                     if (this.hash !== "") {
@@ -54,9 +35,20 @@
                     } 
                 });
             });
-        </script>   
-        
-        <script>
+            
+            $(window).scroll(function(){
+                var scrollnow = $("#cover-img").height();
+                var scrolltop = $(window).scrollTop();
+                scrollnow = scrollnow * .65;
+                if(scrolltop > scrollnow){
+                    $('#cover-img').addClass('blur');
+                    $('#cover-img').removeClass('noblur');
+                } else {
+                    $('#cover-img').removeClass('blur');
+                    $('#cover-img').addClass('noblur');
+                }
+            });
+
             var postno;
             function gotopost(postno) {
                 url = 'post.html?no=' + postno;
@@ -64,283 +56,274 @@
             }
         </script>
     </head>
-    <body style="background-image: url('images/main-photo.jpg');">
+    <body>
+        <img src="images/main-photo.jpg" height="100%" class="noblur" width="100%" id="cover-img">
         
-        <div id="main-page">   
-        <div id="page-title">
-            <center class="vercenter lato">
+        <div class="full gradient">
+            <center class="vercenter page-title">
                 HI! WELCOME TO SUDHANSHU'S BLOG
-                <br>
             </center>
-              <a class="btn btn-large waves-effect waves-light modal-trigger contact-btn" href="#modalcontact"><i class="material-icons" id="contact-me">mail</i></a>
-        </div>
-            
-        <div class="full white" id="top-post">
-            <div class="content-mid hide-on-small-only">
-                <div style="width: 47%; height: 100%; float: left;">
-                    <img class="vercenter" src="images/posts/cover7.jpg" style="width: 100%; height: auto;">
-                </div>
-                <div style="width: 47%; height: 100%; float: right;">
-                    <div class="vercenter">
-                        <center class="lato post-title">Organising IT Fest 2017</center>
-                        <br>
-                        <center class="lato post-intro">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                            <br>
-                            <br>
-                            <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                                10 September 2017
-                            </div>
-                            <div class="chip waves-light waves-effect post-btn" onclick="gotopost(7);">
-                                Read More
-                            </div>
-                        </center>
-                    </div>
-                </div>
-            </div>
-            <div class="content-mid show-on-small hide-on-med-and-up">
-                <div style="width: 100%; height: 100%;">
-                    <div class="vercenter">
-                        <img src="images/posts/cover5.jpg" style="width: 100%; height: auto;">
-                        <br>
-                        <br>
-                        <center class="lato post-title">Organising IT Fest 2017</center>
-                        <br>
-                        <center class="lato post-intro">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                            <br>
-                            <br>
-                            <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                                10 September 2017
-                            </div>
-                            <div class="chip waves-light waves-effect post-btn" onclick="gotopost(7);">
-                                Read More
-                            </div>
-                        </center>
-                    </div> 
-                </div>
-            </div>
         </div>
         
-         <div class="full static-img" style="background-image: url('images/posts/cover6.jpg')">
-             <div class="parallax-post">
-                 <div class="vercenter content-mid">
-                     <center class="lato post-title">Google Code-in 2016 Grand Prize Winner&#39;s Trip</center>
-                     <br>
-                     <center class="lato post-intro">
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                         <br>
-                         <br>
-                         <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                             3 September 2017
-                         </div>
-                         <div class="chip waves-light waves-effect post-btn" onclick="gotopost(6);">
-                             Read More
-                         </div>
-                     </center>
-                 </div> 
-             </div>
-        </div>
-            
-        <div class="full white" id="top-post">
-            <div class="content-mid hide-on-small-only">
-                <div style="width: 47%; height: 100%; float: left;">
-                    <img class="vercenter" src="images/posts/cover5.jpg" style="width: 100%; height: auto;">
-                </div>
-                <div style="width: 47%; height: 100%; float: right;">
-                    <div class="vercenter">
-                        <center class="lato post-title">My Infinitus Reus 2017 Experience</center>
-                        <br>
-                        <center class="lato post-intro">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                            <br>
-                            <br>
-                            <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                                27 August 2017
-                            </div>
-                            <div class="chip waves-light waves-effect post-btn" onclick="gotopost(5);">
-                                Read More
-                            </div>
-                        </center>
-                    </div>
-                </div>
-            </div>
-            <div class="content-mid show-on-small hide-on-med-and-up">
-                <div style="width: 100%; height: 100%;">
-                    <div class="vercenter">
-                        <img src="images/posts/cover5.jpg" style="width: 100%; height: auto;">
-                        <br>
-                        <br>
-                        <center class="lato post-title">My Infinitus Reus 2017 Experience</center>
-                        <br>
-                        <center class="lato post-intro">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                            <br>
-                            <br>
-                            <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                                27 August 2017
-                            </div>
-                            <div class="chip waves-light waves-effect post-btn" onclick="gotopost(5);">
-                                Read More
-                            </div>
-                        </center>
-                    </div> 
-                </div>
-            </div>
-        </div>
-        
-         <div class="full static-img" style="background-image: url('images/posts/cover4.jpg')">
-             <div class="parallax-post">
-                 <div class="vercenter content-mid" >
-                     <center class="lato post-title">My trip to LA</center>
-                     <br>
-                     <center class="lato post-intro">
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                         <br>
-                         <br>
-                         <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                             20 August 2017
-                         </div>
-                         <div class="chip waves-light waves-effect post-btn" onclick="gotopost(4);">
-                             Read More
-                         </div>
-                     </center>
-                 </div> 
-             </div>
-        </div>
-        
-        <div class="full white" id="top-post">
-            <div class="content-mid hide-on-small-only">
-                <div style="width: 47%; height: 100%; float: left;">
-                    <img class="vercenter" src="images/posts/cover3.jpg" style="width: 100%; height: auto;">
-                </div>
-                <div style="width: 47%; height: 100%; float: right;">
-                    <div class="vercenter">
-                        <center class="lato post-title">My Google Code-in Experience</center>
-                        <br>
-                        <center class="lato post-intro">
-                            Programming was not the reason I liked opening my computer every day after school in third grade, it was playing games, but when I learnt my first programming language, the first thing to be removed from my computer was games.
-                            <br>
-                            <br>
-                            <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                                13 August 2017
-                            </div>
-                            <div class="chip waves-light waves-effect post-btn" onclick="gotopost(3);">
-                                Read More
-                            </div>
-                        </center>
-                    </div>
-                </div>
-            </div>
-            <div class="content-mid show-on-small hide-on-med-and-up">
-                <div style="width: 100%; height: 100%;">
-                    <div class="vercenter">
-                        <img src="images/posts/cover3.jpg" style="width: 100%; height: auto;">
-                        <br>
-                        <br>
-                        <center class="lato post-title">My Google Code-in Experience</center>
-                        <br>
-                        <center class="lato post-intro">
-                            Programming was not the reason I liked opening my computer every day after school in third grade, it was playing games, but when I learnt my first programming language, the first thing to be removed from my computer was games.
-                            <br>
-                            <br>
-                            <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                                13 August 2017
-                            </div>
-                            <div class="chip waves-light waves-effect post-btn" onclick="gotopost(3);">
-                                Read More
-                            </div>
-                        </center>
-                    </div> 
-                </div>
-            </div>
-        </div>
-        
-         <div class="full static-img" style="background-image: url('images/posts/cover2.jpg')">
-             <div class="parallax-post">
-                 <div class="vercenter content-mid" >
-                     <center class="lato post-title">Hello World!</center>
-                     <br>
-                     <center class="lato post-intro">
-                         Hello World! I am starting a blog designed using Materialize CSS and hosted on GitHub pages. I will usually post random or science stuff. I will usually update it every fornight. I will start it by writing about my Google Code-in 2016 experience.
-                         <br>
-                         <pre><code>cout&lt;&lt;&quot;Hello World!&quot;&#59;</code></pre>
-                         <br>
-                         <br>
-                         <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                             6 August 2017
-                         </div>
-                         <div class="chip waves-light waves-effect post-btn" onclick="gotopost(2);">
-                             Read More
-                         </div>
-                     </center>
-                 </div> 
-             </div>
-        </div>
-        
-        <div class="full white" id="top-post">
-            <div class="content-mid hide-on-small-only">
-                <div style="width: 47%; height: 100%; float: left;">
-                    <img class="vercenter" src="images/posts/cover1.png" style="width: 100%; height: auto;">
-                </div>
-                <div style="width: 47%; height: 100%; float: right;">
-                    <div class="vercenter">
-                        <center class="lato post-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</center>
-                        <br>
-                        <center class="lato post-intro">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida, at auctor odio finibus.
-                            <br>
-                            <br>
-                            <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                                30 July 2017
-                            </div>
-                            <a class="chip waves-light waves-effect post-btn" onclick="gotopost(1);">
-                                Read More
-                            </a>
-                        </center>
-                    </div>
-                </div>
-            </div>
-            <div class="content-mid show-on-small hide-on-med-and-up">
-                <div class="full">
-                    <div class="vercenter">
-                        <img src="images/posts/cover1.png" style="width: 100%; height: auto;">
-                        <br>
-                        <br>
-                        <center class="lato post-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</center>
-                        <br>
-                        <center class="lato post-intro">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                            <br>
-                            <br>
-                            <div class="chip" style="background-color: rgba(256, 256, 256, 0.6); color: #000000;">
-                                30 July 2017
-                            </div>
-                            <div class="chip waves-light waves-effect post-btn" onclick="gotopost(1);">
-                                Read More
-                            </div>
-                        </center>
-                    </div> 
-                </div>
-            </div>
-        </div>
+        <div class="content-mid">
+            <div class="row">
                 
-        <div class="page-foot">
-            <div class="vercenter lato">
-                <center>&copy; 2017 <a href="https://github.com/sudhanshu2" style="color: #000000;" target="_blank">Sudhanshu Agarwal</a></center>
+                
+                <div class="col s12 m6">
+                     <div class="card some-shadow">
+                         <div class="card-image waves-effect waves-block waves-light">
+                             <img class="activator" src="images/posts/cover7.jpg">
+                               
+                         </div>
+                         <div class="card-content">
+                             <span class="card-title activator black-text">Best Programmers Jokes
+                                 <i class="material-icons right">more_vert</i>
+                             </span>
+                             <div class="card-text activator grey-text">17 September 2017</div>
+                        </div>
+                        <div class="card-action">
+                            <center><a onclick="gotopost(7);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
+                        </div>
+                         <div class="card-reveal">
+                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                             <div class="vercenter">
+                             <span class="card-title black-text">Organising IT Fest 2017</span>
+                             <span>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
+                             </span>
+                             <div style="height: 5%;"></div>
+                             <div class="card-action">
+                                <center><a onclick="gotopost(7);" class="blue-text waves-effect waves-light">Read Post</a></center>
+                             </div>
+                            </div>
+                         </div>
+                     </div>
+                </div> 
+                
+                 <div class="col s12 m6">
+                     <div class="card some-shadow">
+                         <div class="card-image waves-effect waves-block waves-light">
+                             <img class="activator" src="images/posts/cover7.jpg">
+                               
+                         </div>
+                         <div class="card-content">
+                             <span class="card-title activator black-text">Organising IT Fest 2017
+                                 <i class="material-icons right">more_vert</i>
+                             </span>
+                             <div class="card-text activator grey-text">10 September 2017</div>
+                        </div>
+                        <div class="card-action">
+                            <center><a onclick="gotopost(7);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
+                        </div>
+                         <div class="card-reveal">
+                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                             <div class="vercenter">
+                             <span class="card-title black-text">Organising IT Fest 2017</span>
+                             <span>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
+                             </span>
+                             <div style="height: 5%;"></div>
+                             <div class="card-action">
+                                <center><a onclick="gotopost(7);" class="blue-text waves-effect waves-light">Read Post</a></center>
+                             </div>
+                            </div>
+                         </div>
+                     </div>
+                </div> 
+                
+                 <div class="col s12 m6">
+                     <div class="card some-shadow">
+                         <div class="card-image waves-effect waves-block waves-light">
+                             <img class="activator" src="images/posts/cover6.jpg">
+                               
+                         </div>
+                         <div class="card-content">
+                             <span class="card-title activator black-text">Google Code-in 2016 Grand Prize Winner's Trip
+                                 <i class="material-icons right">more_vert</i>
+                             </span>
+                             <div class="card-text activator grey-text">3 September 2017</div>
+                        </div>
+                        <div class="card-action">
+                            <center><a onclick="gotopost(6);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
+                        </div>
+                         <div class="card-reveal">
+                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                             <div class="vercenter">
+                             <span class="card-title black-text">Google Code-in 2016 Grand Prize Winner's Trip</span>
+                             <span>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
+                             </span>
+                             <div style="height: 5%;"></div>
+                             <div class="card-action">
+                                <center><a onclick="gotopost(6);" class="blue-text waves-effect waves-light">Read Post</a></center>
+                             </div>
+                            </div>
+                         </div>
+                     </div>
+                </div> 
+                
+                 <div class="col s12 m6">
+                     <div class="card some-shadow">
+                         <div class="card-image waves-effect waves-block waves-light">
+                             <img class="activator" src="images/posts/cover5b.jpg">
+                               
+                         </div>
+                         <div class="card-content">
+                             <span class="card-title activator black-text">My Infinitus Reus 2017 Experience
+                                 <i class="material-icons right">more_vert</i>
+                             </span>
+                             <div class="card-text activator grey-text">27 August 2017</div>
+                        </div>
+                        <div class="card-action">
+                            <center><a onclick="gotopost(5);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
+                        </div>
+                         <div class="card-reveal">
+                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                             <div class="vercenter">
+                             <span class="card-title black-text">My Infinitus Reus 2017 Experience</span>
+                             <span>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
+                             </span>
+                             <div style="height: 5%;"></div>
+                             <div class="card-action">
+                                <center><a onclick="gotopost(5);" class="blue-text waves-effect waves-light">Read Post</a></center>
+                             </div>
+                            </div>
+                         </div>
+                     </div>
+                </div> 
+                
+                 <div class="col s12 m6">
+                     <div class="card some-shadow">
+                         <div class="card-image waves-effect waves-block waves-light">
+                             <img class="activator" src="images/posts/cover4.jpg">
+                               
+                         </div>
+                         <div class="card-content">
+                             <span class="card-title activator black-text">My trip to LA
+                                 <i class="material-icons right">more_vert</i>
+                             </span>
+                             <div class="card-text activator grey-text">20 August 2017</div>
+                        </div>
+                        <div class="card-action">
+                            <center><a onclick="gotopost(4);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
+                        </div>
+                         <div class="card-reveal">
+                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                             <div class="vercenter">
+                             <span class="card-title black-text">My trip to LA</span>
+                             <span>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
+                             </span>
+                             <div style="height: 5%;"></div>
+                             <div class="card-action">
+                                <center><a onclick="gotopost(4);" class="blue-text waves-effect waves-light">Read Post</a></center>
+                             </div>
+                            </div>
+                         </div>
+                     </div>
+                </div> 
+                
+                 <div class="col s12 m6">
+                     <div class="card some-shadow">
+                         <div class="card-image waves-effect waves-block waves-light">
+                             <img class="activator" src="images/posts/cover3.jpg">
+                               
+                         </div>
+                         <div class="card-content">
+                             <span class="card-title activator black-text">My Google Code-in Experience
+                                 <i class="material-icons right">more_vert</i>
+                             </span>
+                             <div class="card-text activator grey-text">13 August 2017</div>
+                        </div>
+                        <div class="card-action">
+                            <center><a onclick="gotopost(3);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
+                        </div>
+                         <div class="card-reveal">
+                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                             <div class="vercenter">
+                             <span class="card-title black-text">My Google Code-in Experience</span>
+                             <span>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
+                             </span>
+                             <div style="height: 5%;"></div>
+                             <div class="card-action">
+                                <center><a onclick="gotopost(3);" class="blue-text waves-effect waves-light">Read Post</a></center>
+                             </div>
+                            </div>
+                         </div>
+                     </div>
+                </div> 
+                
+                 <div class="col s12 m6">
+                     <div class="card some-shadow">
+                         <div class="card-image waves-effect waves-block waves-light">
+                             <img class="activator" src="images/posts/cover2.jpg">
+                         </div>
+                         <div class="card-content">
+                             <span class="card-title activator black-text">Hello World!
+                                 <i class="material-icons right">more_vert</i>
+                             </span>
+                             <div class="card-text activator grey-text">6 August 2017</div>
+                        </div>
+                        <div class="card-action">
+                            <center><a onclick="gotopost(2);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
+                        </div>
+                         <div class="card-reveal">
+                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                             <div class="vercenter">
+                             <span class="card-title black-text">Hello World!</span>
+                             <span>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
+                             </span>
+                            <pre><code>cout&lt;&lt;&quot;Hello World!&quot;&#59;</code></pre>
+                             <div style="height: 5%;"></div>
+                             <div class="card-action">
+                                <center><a onclick="gotopost(2);" class="blue-text waves-effect waves-light">Read Post</a></center>
+                             </div>
+                            </div>
+                         </div>
+                     </div>
+                </div> 
+                
+                 <div class="col s12 m6">
+                     <div class="card some-shadow">
+                         <div class="card-image waves-effect waves-block waves-light">
+                             <img class="activator" src="images/posts/cover1.png">
+                               
+                         </div>
+                         <div class="card-content">
+                             <span class="card-title activator black-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                 <i class="material-icons right">more_vert</i>
+                             </span>
+                             <div class="card-text activator grey-text">30 July 2017</div>
+                        </div>
+                        <div class="card-action">
+                            <center><a onclick="gotopost(1);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
+                        </div>
+                         <div class="card-reveal">
+                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
+                             <div class="vercenter">
+                             <span class="card-title black-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                             <span>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
+                             </span>
+                             <div style="height: 5%;"></div>
+                             <div class="card-action">
+                                <center><a onclick="gotopost(1);" class="blue-text waves-effect waves-light">Read Post</a></center>
+                             </div>
+                            </div>
+                         </div>
+                     </div>
+                </div>                 
+                
             </div>
-        </div>
+        </div>   
         
-        <div id="modalcontact" class="modal">
-            <div class="fixed-action-btn"  style="margin: 2% !important;">
-                <a class="btn-floating waves-effect waves-light modal-action modal-close red">
-                    <i class=" material-icons white-text small">close</i>
-                </a>
+         <div class="page-foot">
+            <div class="vercenter lato">
+                <center>&copy; 2017 <a href="https://github.com/sudhanshu2" style="color: #FFFFFF;" target="_blank">Sudhanshu Agarwal</a></center>
             </div>
-            <div class="modal-content">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYJdqDwYnv0f_xxeqSs8A2gihbfB1bqH6EGR41Bn7rUzK1TA/viewform?embedded=true" width="100%" height="90%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-            </div>
-        </div>
         </div>
     </body>
 </html>
