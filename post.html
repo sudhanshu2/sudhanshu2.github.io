@@ -42,6 +42,19 @@
                     }
                 });
             });
+            
+            $(window).scroll(function(){
+                var scrollnow = $("#cover-img").height();
+                var scrolltop = $(window).scrollTop();
+                scrollnow = scrollnow * .5;
+                if(scrolltop > scrollnow){
+                    $('#cover-img').addClass('blur');
+                    $('#cover-img').removeClass('noblur');
+                } else {
+                    $('#cover-img').removeClass('blur');
+                    $('#cover-img').addClass('noblur');
+                }
+            });
 
             $(document).ready(function(){
                 var postno = window.location.href.split('?no=').pop();
@@ -51,7 +64,6 @@
                 
                 document.title = postobj[postno - 1].title + " | Sudhanshu's Blog";
 
-                document.getElementById("post-number").innerHTML = postobj[postno - 1].number;
                 document.getElementById("post-date").innerHTML = postobj[postno - 1].date;
                 
                 document.getElementById("post-title").innerHTML = postobj[postno - 1].title;
@@ -60,8 +72,6 @@
                 document.getElementById("post-para2").innerHTML = postobj[postno - 1].para2;
                 document.getElementById("post-para3").innerHTML = postobj[postno - 1].para3;
                 document.getElementById("post-para4").innerHTML = postobj[postno - 1].para4;
-                
-                $("body").addClass(postobj[postno - 1].coverphoto);
                 
                 if(postobj[postno - 1].code1 == 'noshow') {
                     $("#code1").addClass("noshow");
@@ -87,27 +97,13 @@
                     document.getElementById("code4").innerHTML = postobj[postno - 1].code4;
                 }
                 
+                $("#cover-img").addClass(postobj[postno - 1].coverphoto);
                 $("#post-img1").addClass(postobj[postno - 1].photo1);
                 $("#post-img2").addClass(postobj[postno - 1].photo2);
                 $("#post-img3").addClass(postobj[postno - 1].photo3);
                 $("#post-img4").addClass(postobj[postno - 1].photo4);
-                
+                                
                 if(postobj[postno - 1].photo1 == 'noshow') {
-                    $("#div-para1").removeClass("padbot");
-                    $("#div-para2").removeClass("padtop");
-                }
-                
-                if(postobj[postno - 1].photo2 == 'noshow') {
-                    $("#div-para2").removeClass("padbot");
-                    $("#div-para3").removeClass("padtop");
-                }
-                
-                if(postobj[postno - 1].photo3 == 'noshow') {
-                    $("#div-para3").removeClass("padbot");
-                    $("#div-para4").removeClass("padtop");
-                }
-                
-                /*if(postobj[postno - 1].photo1 == 'noshow') {
                     $("#post-img1txt").addClass("noshow");
                 } else {
                     document.getElementById("post-img1txt").innerHTML = postobj[postno - 1].photo1txt;
@@ -129,8 +125,9 @@
                     $("#post-img4txt").addClass("noshow");
                 } else {
                     document.getElementById("post-img4txt").innerHTML = postobj[postno - 1].photo4txt;
-                }*/
+                }
             });
+            
         </script>
         
         <script>
@@ -143,79 +140,54 @@
             ga('send', 'pageview');
         </script>
     </head>
-
-    <body>
-        <div>
-        <div id="top"></div>
+    <body>    
         
-        
-        <div id="page-title">
-            <center class="vercenter lato" id="post-title">
+        <a class="btn btn-flat btn-floating waves-effect waves-dark black left black-shade" style="margin: 2%; position: fixed;" href="index.html"><i class="material-icons white-text">arrow_back</i></a>
+        <div id="cover-img"></div>
+        <div style="height: 70%" class="black-shade content-mid">
+            <center class="vercenter">
+                <div id="post-title"></div>
             </center>
         </div>
-        
-        <div class="fixed-action-btn">
-            <a class="btn-floating btn-large white waves-effect waves-dark" href="index.html">
-                <i class=" material-icons black-text">home</i>
-            </a>
-        </div>
-
-        <div style="display:none" id="post-number"></div>
-        
-        <div class="white" style="width:100%;">
-            <div class="content-mid padtop padbot" id="div-para1">
-                <center>
-                    <div class="chip lato">Sudhanshu Agarwal</div>
-                    <div class="chip lato" id="post-date"></div>
-                </center>
-                <br>
-                <center><pre id="code1"><code></code></pre></center>
-                <br>
-                <center class="lato post-intro" id="post-para1">
-                </center>
-            </div>
-        </div>
-        
-        <div class="static-img" id="post-img1"></div>
+        <div style="width: 100%;">
             
-        <div class="white" style="width:100%;">
-            <div class="content-mid padtop padbot" id="div-para2">
+            
+            <div class="content-mid white" style="padding-left: 4%; padding-right: 4%; padding-bottom: 4%; padding-top: 3%; box-shadow: 0px 0px 8px #000000;">
+                <center>
+                    <div class="chip post-chip green-gradient waves-effect waves-dark">Sudhanshu Agarwal</div>
+                    <div class="chip post-chip red-gradient waves-effect waves-dark" id="post-date"></div>
+                </center>
+                
+                <div style="height: 1%;"></div>
+                <center><pre id="code1"><code></code></pre></center>
+                <div style="height: 2%;"></div>
+                <div class="post-text" id="post-para1"></div>
+                <div style="height: 1%;"></div>
+                <div class="post-img" style="position: relative;" id="post-img1"><div class="img-title" id="post-img1txt"></div></div>
+                
                 <center><pre id="code2"><code></code></pre></center>
-                <br>
-                <center class="lato post-intro" id="post-para2">
-                </center>
-            </div>
-        </div>
-        
-        <div class="static-img" id="post-img2"></div>
-        
-        <div class="white" style="width:100%;">
-            <div class="content-mid padtop padbot" id="div-para3">
+                <div style="height: 2%;"></div>
+                <div class="post-text" id="post-para2"></div>
+                <div style="height: 1%;"></div>
+                <div class="post-img" style="position: relative;" id="post-img2"><div class="img-title" id="post-img2txt"></div></div>
+                
                 <center><pre id="code3"><code></code></pre></center>
-                <br>
-                <center class="lato post-intro" id="post-para3">
-                </center>
-            </div>
-        </div>
-        
-        <div class="static-img" id="post-img3"></div>
-        
-        <div class="white" style="width:100%;">
-            <div class="content-mid padtop padbot" id="div-para4">
+                <div style="height: 2%;"></div>
+                <div class="post-text" id="post-para3"></div>
+                <div style="height: 1%;"></div>
+                <div class="post-img" style="position: relative;" id="post-img3"><div class="img-title" id="post-img3txt"></div></div>
+                
                 <center><pre id="code4"><code></code></pre></center>
-                <br>
-                <center class="lato post-intro" id="post-para4">
-                </center>
+                <div style="height: 2%;"></div>
+                <div class="post-text" id="post-para4"></div>
+                <div style="height: 1%;"></div>
+                <div class="post-img" style="position: relative;" id="post-img4"><div class="img-title" id="post-img4txt"></div></div>
             </div>
+        </div>
+                
+        <div class="page-foot">
+            <center class="vercenter">&copy; 2017 <a href="https://github.com/sudhanshu2" style="color: #FFFFFF;" target="_blank">Sudhanshu Agarwal</a></center>
         </div>
         
-        <div class="static-img" id="post-img4"></div>
-
-        <div class="page-foot">
-            <div class="vercenter lato">
-                <center>&copy; 2017 <a href="https://github.com/sudhanshu2" style="color: #000000;" target="_blank">Sudhanshu Agarwal</a></center>
-            </div>
-        </div>
-        </div>
     </body>
 </html>
