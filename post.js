@@ -55,7 +55,7 @@ var postobj = [
       number: 3,
       title: 'My Google Code-in 2016 Experience',
 
-      para1: 'Post coming up!',
+      para1: 'Error',
       para2: '',
       para3: '',
       para4: '',
@@ -80,7 +80,7 @@ var postobj = [
       number: 4,
       title: 'Adios LA',
 
-      para1: 'Post coming up!',
+      para1: 'Error',
       para2: '',
       para3: '',
       para4: '',
@@ -105,7 +105,7 @@ var postobj = [
       number: 5,
       title: 'History of BRL-CAD',
 
-      para1: 'Post coming up!',
+      para1: 'Error',
       para2: '',
       para3: '',
       para4: '',
@@ -130,7 +130,7 @@ var postobj = [
       number: 6,
       title: 'Google Code-in 2016 Grand Prize Winner&#39;s Trip',
 
-      para1: 'Post coming up!',
+      para1: 'Error',
       para2: '',
       para3: '',
       para4: '',
@@ -155,7 +155,7 @@ var postobj = [
       number: 7,
       title: 'Organising IT Fest 2017',
 
-      para1: 'Post coming up!',
+      para1: 'Error',
       para2: '',
       para3: '',
       para4: '',
