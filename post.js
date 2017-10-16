@@ -73,7 +73,7 @@ var postobj = [
       code2: 'noshow',
       code3: 'noshow',
       code4: 'noshow',
-    },
+    }/*,
 
     {
       date: '20 August 2017',
@@ -173,5 +173,5 @@ var postobj = [
       code2: 'noshow',
       code3: 'noshow',
       code4: 'noshow',
-    }
+    }*/
   ]

@@ -76,7 +76,11 @@ body {
     object-fit: cover;
     z-index: -1;
     transform: scale(1.1); 
-    -webkit-filter: blur(6px);
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%);
+    -moz-filter: brightness(40%);
+    -ms-filter: brightness(40%);
+    -o-filter: brightness(40%);
 }
 
 #post-title {
@@ -105,9 +109,9 @@ body {
 }
 
 .blue-gradient {
-background: #396afc;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #396afc;  
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc); 
+    background: linear-gradient(to right, #2948ff, #396afc); 
 
 }
 

@@ -70,40 +70,10 @@ body {
 .page-title {
     font-size: 220%;
     color: #FFFFFF;
+    background-color: transparent !important;
     font-weight: 300;
     letter-spacing: 5;
 }
-
-.some-shadow {
-    box-shadow: 0px 0px 20px #000000;
-}
-
-.blur {
-    -moz-filter: blur(10px);
-    -ms-filter: blur(10px);
-    -o-filter: blur(10px);
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
-    transition: .3s -moz-filter linear;
-    transition: .3s -ms-filter linear;
-    transition: .3s -o-filter linear;
-    transition: .3s -webkit-filter linear;
-    transition: .3s filter linear;
-}
-
-.noblur {
-    -moz-filter: blur(0px);
-    -ms-filter: blur(0px);
-    -o-filter: blur(0px);
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    transition: .3s -moz-filter linear;
-    transition: .3s -ms-filter linear;
-    transition: .3s -o-filter linear;
-    transition: .3s -webkit-filter linear;
-    transition: .3s filter linear;
-}
-
 
 #cover-img {
     position: fixed;
@@ -112,6 +82,11 @@ body {
     position: fixed; 
     object-fit: cover;
     z-index: -1;
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%);
+    -moz-filter: brightness(40%);
+    -ms-filter: brightness(40%);
+    -o-filter: brightness(40%);
 }
 
 .gradient {
@@ -157,4 +132,8 @@ body {
 
 .noshow {
     display: none;
+}
+
+.thin {
+    font-weight: 300;
 }
