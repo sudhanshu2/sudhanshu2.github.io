@@ -1,37 +1,101 @@
-<html lang="en">
+<!DOCTYPE html>
+<html> 
     <head>
-        <title>Sudhanshu's Blog</title>
-    
+        <title>Sudhanshu Agarwal</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen, projection"/>
         <link type="text/css" rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <meta name="theme-color" content="#FFFFFF">
         
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97180729-1"></script>
-        
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,800,900|Rubik:400,500,700,900" rel="stylesheet">
 
-            gtag('config', 'UA-97180729-1');
-        </script>
-        
+    </head>
+    <body class="cloud">
+        <div class="hide-on-small-only" style="height: 5vh;"></div>
+        <div class="content-mid">
+            <div class="intro-tab royal" style="height: 90vh;">
+              <div class="img-tab">
+                  <div class="vercenter">
+                      <span class="title-text rubik">
+                          <strong>Hi, I am <br class="hide-on-med-and-up">Sudhanshu</strong>
+                      </span>
+                      <div class="divider"></div>
+                      <div style="height: 3vh;"></div>
+                      <span class="main-text rubik">
+                          I am a <strong>Google Code-in 2016 Grand Prize Winner</strong> and a <strong>Quizzer</strong>. This is my website and read on to learn more about me!
+                      </span>
+                  </div>
+                  <div class="hide-on-small-only" style="height: 30vh;"></div>
+                  <center><a class="btn-floating btn-large waves-effect waves-dark white noshadow bottom-obj pulse" onclick="nopulse();" href="#second" id="btn-down"><i class="material-icons royal-text">arrow_downward</i></a></center>
+                </div>
+            </div>
+            <div class="intro-tab leaf" id="second">
+              <div class="row">
+                  <div class="col s12 m9 hide-on-small-only">
+                      <div class="img-tab">
+                            <div class="vercenter">
+                                <span class="title-text rubik hide-on-small-only">
+                                    <strong>Hello World!</strong>
+                                </span>
+                                <div class="divider hide-on-small-only"></div>
+                                <div style="height: 3vh;" class="hide-on-small-only"></div>
+                                <span class="main-text rubik hide-on-small-only">                                    
+                                    Hello World! I am starting a blog designed using Materialize CSS and hosted on GitHub pages. I will usually post random or science stuff. I will usually update it every fornight. I will start it by writing about my Google Code-in 2016 experience.
+
+                                </span>
+                                <br><br>
+                                <a class="waves-effect waves-dark btn-large transparent noshadow btn-flat white-text col s12">Read Blog</a>
+                            </div>
+                        </div>
+                  </div>
+                    <div class="col s12 m3">
+                        <div class="img-tab">
+                            <div class="vercenter row">
+                                <a class="waves-effect waves-dark btn-large white btn-flat green-text noshadow col s12" href="https://www.github.com/sudhanshu2" target="_blank">GitHub</a>
+                                <a class="waves-effect waves-dark btn-large white btn-flat green-text noshadow col s12" href="https://goo.gl/forms/4mvmJx2O9lI2uSw53" target="_blank">Mail</a>
+                                <a class="waves-effect waves-dark btn-large white btn-flat green-text noshadow col s12 hide-on-med-and-up" href="https://sudhanshu2.github.io">Read Blog</a>
+                            </div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+            <div class="intro-tab sunset">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="img-tab">
+                            <div class="vercenter">
+                                <span class="title-text rubik">
+                                    <strong>Photo Gallery</strong>
+                                </span>
+                                <div class="divider"></div>
+                                <div style="height: 3vh;"></div>
+                                <span class="main-text rubik">
+                                    I took some photos in the Summer of &#39;17 in San Francisco and Los Angeles.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="row">
+                            <div class="col s12 m12 half-height img-1 static-img materialboxed"></div>
+                            <div class="col s12 m6 half-height img-2 static-img materialboxed"></div>
+                            <div class="col s12 m6 half-height img-3 static-img materialboxed"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%; height: 15vh;" class="hide-on-small-only">
+            <div class="vercenter">
+                <center class="main-text rubik black-text" style="font-size: 90%; font-weight: 300;">
+                    &copy;1999-2017 <a href="https://www.github.com/sudhanshu2" target="_blank" class="black-text">Sudhanshu Agarwal</a>
+                </center>
+            </div>
+        </div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script type="text/javascript" src="post.js"></script>
-        <script type="text/javascript">
-            $( document ).ready(function(){
-                $('.button-collapse').sideNav({
-                     menuWidth: 300,
-                     edge: 'left', 
-                     closeOnClick: true, 
-                     draggable: true 
-                 }
-                );
-            });
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+          <script type="text/javascript">
             $(document).ready(function(){
                 $("a").on('click', function(event) {
                     if (this.hash !== "") {
@@ -45,296 +109,11 @@
                     } 
                 });
             });
-
-            var postno;
-            function gotopost(postno) {
-                url = 'post.html?no=' + postno;
-                document.location.href = url;
-            }
+              
+              function nopulse() {
+                  $("#btn-down").removeClass("pulse");
+                  $("#btn-down").fadeOut();
+              }
         </script>
-    </head>
-    <body>
-        <img src="images/main-photo.jpg" height="100%" width="100%" id="cover-img">
-        
-        <div class="full">
-            <center class="vercenter content-mid page-title">
-                HI! WELCOME TO SUDHANSHU'S WEBSITE
-            </center>
-        </div>
-        
-        <div class="content-mid">
-            <div class="row">
-                
-                <div class="col s12 m12">
-                     <div class="card noshadow">
-                         <div class="card-content">
-                             <center><span class="card-title black-text">About Me</span></center>
-                             <br>
-                             <span class="thin">Hi! I am Sudhanshu. I am a senior in high school. I am a Google Code-in 2016 Grand Prize Winner and I was ranked 68 in the world in Junior World Quizzing Championships 2016. I have also developed a patent pending technology.
-                             <br>My interests and hobbies include quizzing and music. I also like solving cryptograms online for fun!
-                             <br>All images on this website are either &copy; 2016-2017 Sudhanshu Agarwal or &copy; 1972-2017 Delhi Public School, R. K. Puram</span>
-                        </div>
-                        <div class="card-action">
-                            <center><a href="https://goo.gl/forms/zKekE8lf4mAbVggp1" target="_blank" class="white-text btn green btn-flat waves-effect waves-light">Contact Me</a></center>
-                        </div>
-                     </div>
-                </div> 
-                        
-                <!--<div class="col s12 m6">
-                     <div class="card noshadow">
-                         <div class="card-image waves-effect waves-block waves-light">
-                             <img class="activator" src="images/posts/cover7.jpg">
-                               
-                         </div>
-                         <div class="card-content">
-                             <span class="card-title activator black-text">Quizzing?
-                                 <i class="material-icons right">more_vert</i>
-                             </span>
-                             <div class="card-text activator grey-text">17 September 2017</div>
-                        </div>
-                        <div class="card-action">
-                            <center><a onclick="gotopost(7);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
-                        </div>
-                         <div class="card-reveal">
-                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
-                             <div class="vercenter">
-                             <span class="card-title black-text">Organising IT Fest 2017</span>
-                             <span>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                             </span>
-                             <div style="height: 5%;"></div>
-                             <div class="card-action">
-                                <center><a onclick="gotopost(7);" class="blue-text waves-effect waves-light">Read Post</a></center>
-                             </div>
-                            </div>
-                         </div>
-                     </div>
-                </div> 
-                
-                 <div class="col s12 m6">
-                     <div class="card noshadow">
-                         <div class="card-image waves-effect waves-block waves-light">
-                             <img class="activator" src="images/posts/cover7.jpg">
-                               
-                         </div>
-                         <div class="card-content">
-                             <span class="card-title activator black-text">Organising IT Fest 2017
-                                 <i class="material-icons right">more_vert</i>
-                             </span>
-                             <div class="card-text activator grey-text">10 September 2017</div>
-                        </div>
-                        <div class="card-action">
-                            <center><a onclick="gotopost(7);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
-                        </div>
-                         <div class="card-reveal">
-                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
-                             <div class="vercenter">
-                             <span class="card-title black-text">Organising IT Fest 2017</span>
-                             <span>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                             </span>
-                             <div style="height: 5%;"></div>
-                             <div class="card-action">
-                                <center><a onclick="gotopost(7);" class="blue-text waves-effect waves-light">Read Post</a></center>
-                             </div>
-                            </div>
-                         </div>
-                     </div>
-                </div> 
-                
-                 <div class="col s12 m6">
-                     <div class="card noshadow">
-                         <div class="card-image waves-effect waves-block waves-light">
-                             <img class="activator" src="images/posts/cover6.jpg">
-                               
-                         </div>
-                         <div class="card-content">
-                             <span class="card-title activator black-text">Google Code-in 2016 Trip
-                                 <i class="material-icons right">more_vert</i>
-                             </span>
-                             <div class="card-text activator grey-text">3 September 2017</div>
-                        </div>
-                        <div class="card-action">
-                            <center><a onclick="gotopost(6);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
-                        </div>
-                         <div class="card-reveal">
-                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
-                             <div class="vercenter">
-                             <span class="card-title black-text">Google Code-in 2016 Grand Prize Winner's Trip</span>
-                             <span>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                             </span>
-                             <div style="height: 5%;"></div>
-                             <div class="card-action">
-                                <center><a onclick="gotopost(6);" class="blue-text waves-effect waves-light">Read Post</a></center>
-                             </div>
-                            </div>
-                         </div>
-                     </div>
-                </div> 
-                
-                 <div class="col s12 m6">
-                     <div class="card some-shadow">
-                         <div class="card-image waves-effect waves-block waves-light">
-                             <img class="activator" src="images/posts/cover5b.jpg">
-                               
-                         </div>
-                         <div class="card-content">
-                             <span class="card-title activator black-text">My Infinitus Reus 2017 Experience
-                                 <i class="material-icons right">more_vert</i>
-                             </span>
-                             <div class="card-text activator grey-text">27 August 2017</div>
-                        </div>
-                        <div class="card-action">
-                            <center><a onclick="gotopost(5);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
-                        </div>
-                         <div class="card-reveal">
-                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
-                             <div class="vercenter">
-                             <span class="card-title black-text">My Infinitus Reus 2017 Experience</span>
-                             <span>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                             </span>
-                             <div style="height: 5%;"></div>
-                             <div class="card-action">
-                                <center><a onclick="gotopost(5);" class="blue-text waves-effect waves-light">Read Post</a></center>
-                             </div>
-                            </div>
-                         </div>
-                     </div>
-                </div> 
-                
-                 <div class="col s12 m6">
-                     <div class="card some-shadow">
-                         <div class="card-image waves-effect waves-block waves-light">
-                             <img class="activator" src="images/posts/cover4.jpg">
-                               
-                         </div>
-                         <div class="card-content">
-                             <span class="card-title activator black-text">Trip to LA
-                                 <i class="material-icons right">more_vert</i>
-                             </span>
-                             <div class="card-text activator grey-text">20 August 2017</div>
-                        </div>
-                        <div class="card-action">
-                            <center><a onclick="gotopost(4);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
-                        </div>
-                         <div class="card-reveal">
-                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
-                             <div class="vercenter">
-                             <span class="card-title black-text">Trip to LA</span>
-                             <span>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                             </span>
-                             <div style="height: 5%;"></div>
-                             <div class="card-action">
-                                <center><a onclick="gotopost(4);" class="blue-text waves-effect waves-light">Read Post</a></center>
-                             </div>
-                            </div>
-                         </div>
-                     </div>
-                </div> 
-                
-                 <div class="col s12 m6">
-                     <div class="card some-shadow">
-                         <div class="card-image waves-effect waves-block waves-light">
-                             <img class="activator" src="images/posts/cover3.jpg">
-                               
-                         </div>
-                         <div class="card-content">
-                             <span class="card-title activator black-text">My Google Code-in Experience
-                                 <i class="material-icons right">more_vert</i>
-                             </span>
-                             <div class="card-text activator grey-text">13 August 2017</div>
-                        </div>
-                        <div class="card-action">
-                            <center><a onclick="gotopost(3);" class="white-text btn blue waves-effect waves-light">Read Post</a></center>
-                        </div>
-                         <div class="card-reveal">
-                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
-                             <div class="vercenter">
-                             <span class="card-title black-text">My Google Code-in Experience</span>
-                             <span>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                             </span>
-                             <div style="height: 5%;"></div>
-                             <div class="card-action">
-                                <center><a onclick="gotopost(3);" class="blue-text waves-effect waves-light">Read Post</a></center>
-                             </div>
-                            </div>
-                         </div>
-                     </div>
-                </div> -->
-                
-                 <div class="col s12 m6">
-                     <div class="card some-shadow">
-                         <div class="card-image waves-effect waves-block waves-light">
-                             <img class="activator" src="images/posts/cover2.jpg">
-                         </div>
-                         <div class="card-content">
-                             <span class="card-title activator black-text">Hello World!
-                                 <i class="material-icons right">more_vert</i>
-                             </span>
-                             <div class="card-text activator grey-text">6 August 2017</div>
-                        </div>
-                        <div class="card-action">
-                            <center><a onclick="gotopost(2);" class="white-text btn blue waves-effect btn-flat waves-light">Read Post</a></center>
-                        </div>
-                         <div class="card-reveal">
-                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
-                             <div class="vercenter">
-                             <span class="card-title black-text">Hello World!</span>
-                             <span class="thin">
-                                 Hello World! I am starting a blog designed using Materialize CSS and hosted on GitHub pages. I will usually post random or science stuff. I will usually update it every fornight. I will start it by writing about my Google Code-in 2016 experience.
-                             </span>
-                            <pre><code>cout&lt;&lt;&quot;Hello World!&quot;&#59;</code></pre>
-                             <div style="height: 5%;"></div>
-                             <div class="card-action">
-                                <center><a onclick="gotopost(2);" class="blue-text waves-effect btn-flat waves-light">Read Post</a></center>
-                             </div>
-                            </div>
-                         </div>
-                     </div>
-                </div> 
-                
-                 <div class="col s12 m6">
-                     <div class="card some-shadow">
-                         <div class="card-image waves-effect waves-block waves-light">
-                             <img class="activator" src="images/posts/cover1.png">
-                               
-                         </div>
-                         <div class="card-content">
-                             <span class="card-title activator black-text">Lorem ipsum dolor sit amet
-                                 <i class="material-icons right">more_vert</i>
-                             </span>
-                             <div class="card-text activator grey-text">30 July 2017</div>
-                        </div>
-                        <div class="card-action">
-                            <center><a onclick="gotopost(1);" class="white-text btn-flat btn blue waves-effect waves-light">Read Post</a></center>
-                        </div>
-                         <div class="card-reveal">
-                             <span class="card-title black-text"><i class="material-icons right">close</i></span>
-                             <div class="vercenter">
-                             <span class="card-title black-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                             <span class="thin">
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec efficitur neque, non pharetra metus. Morbi at dui pulvinar, aliquet elit sit amet, porttitor orci. Nulla hendrerit quam id odio gravida.
-                             </span>
-                             <div style="height: 5%;"></div>
-                             <div class="card-action">
-                                <center><a onclick="gotopost(1);" class="btn-flat blue-text waves-effect waves-light">Read Post</a></center>
-                             </div>
-                            </div>
-                         </div>
-                     </div>
-                </div>    
-                
-            </div>
-        </div> 
-                
-         <div class="page-foot">
-            <div class="vercenter lato">
-                <center>&copy; 2017 <a href="https://github.com/sudhanshu2" style="color: #FFFFFF;" target="_blank">Sudhanshu Agarwal</a></center>
-            </div>
-        </div>
     </body>
 </html>

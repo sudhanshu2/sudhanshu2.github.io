@@ -31,15 +31,10 @@
 .content-mid {
     box-sizing: border-box;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 1000px;
+    padding: 0px;
+    max-width: 1200px;
     margin: 0 auto;
-}
-
-.full {
-    height: 100%;
-    width: 100%;
+    box-shadow: 0px 0px 25px #A5A5A5;
 }
 
 .vercenter {
@@ -50,90 +45,148 @@
   transform: translateY(-50%);
 }
 
-
-body {
-    width: 100%;
-    height: 100%;
-    background: #E8E8E8;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+.intro-tab {
+    height: 80vh;
 }
 
 .static-img {
     background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
-.page-title {
-    font-size: 220%;
-    color: #FFFFFF;
-    background-color: transparent !important;
-    font-weight: 300;
-    letter-spacing: 5;
-}
-
-#cover-img {
-    position: fixed;
     background-size: cover;
-    transform: scale(1.1); 
-    position: fixed; 
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(40%);
-    -webkit-filter: brightness(40%);
-    -moz-filter: brightness(40%);
-    -ms-filter: brightness(40%);
-    -o-filter: brightness(40%);
 }
 
-.gradient {
-    background: transparent; 
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), transparent); 
-    background: -moz-linear-gradient(rgba(0, 0, 0, 0.7), transparent); 
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), transparent); 
-    background: -ms-linear-gradient(rgba(0, 0, 0, 0.7), transparent); 
-    background: linear-gradient(rgba(0, 0, 0, 0.7), transparent); 
+.img-tab {
+    height: 80vh;
+    padding: 40px;
 }
 
-.black-shade {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+.half-height {
+    height: 40vh;
+    padding: 0px;
+    right: 0px;
+}
+
+.half-height:hover {
+    transition: all 0.4s ease;
+}
+
+.col {
+    padding: 0px !important;
+}
+
+.title-text {
+    font-size: 350%;
+    font-weight: 900;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.title-text:hover {  
+    opacity: 0.2;
+    transition: all 0.2s ease;
+}
+
+.main-text {
+    font-size: 125%;
+    font-weight: 400;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.main-text:hover {  
+    opacity: 0.4;
+    transition: all 0.2s ease;
+}
+
+.royal-text {
+    color: #141E30 !important; 
 }
 
 .noshadow {
-    box-shadow: 0px 0px 0px #FFFFFF;
+    box-shadow: 0px 0px 0px 0px !important;
+    opacity: 0.8;
 }
 
-
-.page-foot {
-    height: 10%;
-    font-weight: 300;
-    bottom: 0;
-    background-color: transparent;
-    color: #FFFFFF;
+.noshadow:hover {
+    opacity: 0.4;
+    transition: all 0.2s ease;
 }
 
-.card-image {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    height: 30%;
-}
-    
-.page-title {
-    padding: 2%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+.bottom-obj {
+    margin-top: 25vh;
 }
 
-.noshow {
-    display: none;
+.purple-text {
+    color: #2F0743 !important; 
 }
 
-.thin {
-    font-weight: 300;
+.btn-flat {
+    margin: 15px;
+}
+
+/*-------FONTS-------*/
+
+.catarmaran {
+    font-family: 'Catamaran', sans-serif;
+}
+
+.rubik {
+    font-family: 'Rubik', sans-serif;
+}
+
+/*------PICTURES-------*/
+
+.img-1 {
+    background-image: url("images/AndroidPark.jpg");
+}
+
+.img-2 {
+    background-image: url("images/GoldenGate.jpg");
+}
+
+.img-3 {
+    background-image: url("images/Sunset.jpg");
+}
+
+/*------GRADIENTS FROM UIGRADIENTS.COM------*/
+
+.dull {
+    background: #C9D6FF;  
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF); 
+}
+
+.cloud {
+    background: #ECE9E6;  
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6); 
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+}
+
+.royal {
+    background: #141E30; 
+    background: -webkit-linear-gradient(to right, #243B55, #141E30); 
+    background: linear-gradient(to right, #243B55, #141E30);
+}
+
+.purple {
+    background: #41295a;  
+    background: -webkit-linear-gradient(to right, #2F0743, #41295a);  
+    background: linear-gradient(to right, #2F0743, #41295a); 
+}
+
+.sunset {
+    background: #ee0979;  
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979); 
+    background: linear-gradient(to right, #ff6a00, #ee0979); 
+}
+
+.frost {
+    background: #000428;  
+    background: -webkit-linear-gradient(to right, #004e92, #000428); 
+    background: linear-gradient(to right, #004e92, #000428); 
+}
+
+.leaf {
+    background: #76b852; 
+    background: -webkit-linear-gradient(to right, #8DC26F, #76b852);  
+    background: linear-gradient(to right, #8DC26F, #76b852);
 }
