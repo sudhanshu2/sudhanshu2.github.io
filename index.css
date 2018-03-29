@@ -17,10 +17,10 @@
 
 .main {
     font-size: 200%;
-    font-weight: 300;
 }
 
 a {
+    font-size: 250%;
     color: #000000;
     text-decoration: none;
 }
