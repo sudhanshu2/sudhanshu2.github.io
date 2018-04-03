@@ -45,8 +45,21 @@
   transform: translateY(-50%);
 }
 
-.intro-tab {
-    height: 80vh;
+.collapsible {
+    box-shadow: 0px 0px 0px 0px !important; 
+    margin: 0px !important; 
+    border: 0px !important;
+}
+
+.collapsible-header, .collapsible-body {
+    box-shadow: 0px 0px 0px 0px !important; 
+    margin: 0px; 
+    border: 0px !important;
+    background-color: transparent !important;
+}
+
+.post-tab {
+    padding: 10px;
 }
 
 .static-img {
@@ -74,7 +87,7 @@
 }
 
 .title-text {
-    font-size: 350%;
+    font-size: 250%;
     font-weight: 900;
     color: #FFFFFF;
     opacity: 0.8;
@@ -119,8 +132,9 @@
     color: #2F0743 !important; 
 }
 
-.btn-flat {
-    margin: 15px;
+.homebtn {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0px !important;
 }
 
 /*-------FONTS-------*/
@@ -135,17 +149,7 @@
 
 /*------PICTURES-------*/
 
-.img-1 {
-    background-image: url("images/AndroidPark.jpg");
-}
 
-.img-2 {
-    background-image: url("images/GoldenGate.jpg");
-}
-
-.img-3 {
-    background-image: url("images/Sunset.jpg");
-}
 
 /*------GRADIENTS FROM UIGRADIENTS.COM------*/
 

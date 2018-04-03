@@ -3,18 +3,117 @@
         <title>Sudhanshu Agarwal</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link type="text/css" rel="stylesheet" href="index.css">
-        <meta name="theme-color" content="#ECE9E6">
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <meta name="theme-color" content="#FFFFFF">
+        
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,800,900|Rubik:400,500,700,900" rel="stylesheet">
 
     </head>
-    <body class="cloud playfair">
-        <div style="height: 100vh; width: 100%;">
-            <center class="vercenter">
-            <span style="font-size: 250%;">Hi! I'm Sudhanshu</span>
-            <hr style="width: 50%;">
-            <span style="font-size: 150%;">I am working on this website</span>
-        </center>
+    <body class="cloud">
+        <div class="hide-on-small-only" style="height: 5vh;"></div>
+        <div class="content-mid">
+            <div class="intro-tab royal" style="height: 90vh;">
+              <div class="img-tab">
+                  <div class="vercenter">
+                      <span class="title-text rubik">
+                          <strong>Hi, I am <br class="hide-on-med-and-up">Sudhanshu</strong>
+                      </span>
+                      <div class="divider"></div>
+                      <div style="height: 3vh;"></div>
+                      <span class="main-text rubik">
+                          I am a <strong>Google Code-in 2016 Grand Prize Winner</strong> and a <strong>Quizzer</strong>. I am currently working on a blog. I have written an article for Digit Magazine India in November 2017 issue.
+                      </span>
+                  </div>
+                </div>
+            </div>
+            <div class="intro-tab leaf" id="second">
+              <div class="row">
+                  <div class="col s12 m9 hide-on-small-only">
+                      <div class="img-tab">
+                            <div class="vercenter">
+                                <span class="title-text rubik hide-on-small-only">
+                                    <strong>Hello World!</strong>
+                                </span>
+                                <div class="divider hide-on-small-only"></div>
+                                <div style="height: 3vh;" class="hide-on-small-only"></div>
+                                <span class="main-text rubik hide-on-small-only">                                    
+                                    Hello World! I will start a blog designed using Materialize CSS and hosted on GitHub pages. I will usually post random or science stuff. I will usually update it every fornight. I will start it by writing about my Google Code-in 2016 experience.
+
+                                </span>
+                                <br><br>
+                                <a class="waves-effect waves-dark btn-large transparent noshadow btn-flat white-text col s12" href="https://sudhanshu2.github.io/blog">Read Blog</a>
+                            </div>
+                        </div>
+                  </div>
+                    <div class="col s12 m3">
+                        <div class="img-tab">
+                            <div class="vercenter row">
+                                <a class="waves-effect waves-dark btn-large white btn-flat green-text noshadow col s12" href="https://www.github.com/sudhanshu2" target="_blank">GitHub</a>
+                                <a class="waves-effect waves-dark btn-large white btn-flat green-text noshadow col s12" href="https://goo.gl/forms/4mvmJx2O9lI2uSw53" target="_blank">Mail</a>
+                                <a class="waves-effect waves-dark btn-large white btn-flat green-text noshadow col s12 hide-on-med-and-up" href="https://sudhanshu2.github.io/blog">Read Blog</a>
+                            </div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+            <div class="intro-tab sunset">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="img-tab">
+                            <div class="vercenter">
+                                <span class="title-text rubik">
+                                    <strong>Photo Gallery</strong>
+                                </span>
+                                <div class="divider"></div>
+                                <div style="height: 3vh;"></div>
+                                <span class="main-text rubik">
+                                    I will upload some of photos I took in the last few months. 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="row">
+                            <div class="col s12 m12 half-height img-1 static-img materialboxed"></div>
+                            <div class="col s12 m6 half-height img-2 static-img materialboxed"></div>
+                            <div class="col s12 m6 half-height img-3 static-img materialboxed"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+        <div style="height: 110vh;" class="hide-on-med-and-up"></div>
+        <div style="height: 5vh;"></div>
+        <div>
+            <center class="main-text rubik black-text" style="font-size: 90%; font-weight: 300;">
+                &copy;2017 <a href="https://www.github.com/sudhanshu2" target="_blank" class="black-text">Sudhanshu Agarwal</a>
+            </center>
+        </div>
+        <div style="height: 5vh;"></div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+          <script type="text/javascript">
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function(){
+                            window.location.hash = hash;
+                        });
+                    } 
+                });
+            });
+              
+              function nopulse() {
+                  $("#btn-down").removeClass("pulse");
+                  $("#btn-down").fadeOut();
+              }
+        </script>
         
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97180729-1"></script>
         <script>
