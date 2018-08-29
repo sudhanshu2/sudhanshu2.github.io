@@ -1,41 +1,35 @@
 .vercenter {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 25vw;
+  margin-right: 25vw;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.playfair {
-    font-family: 'Playfair Display', serif;
+#main-text {
+    font-size: 35px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Muli', sans-serif;
 }
 
-.title {
-    font-size: 250%;
-    font-weight: 300;
+hr {
+    border: 0 none;
+    height: 0.5px;
+    background: #000000;
+    border-radius: 100px;
 }
 
-.main {
-    font-size: 200%;
+@media screen and (max-width: 600px) {}
+    .vercenter {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
-.main-other {
-    font-size: 200%;
 }
 
 a {
-    font-size: 250%;
-    color: #000000;
     text-decoration: none;
-}
-
-a:hover {
-    color: #BBBBBB;
-    transition: color .2s;
-}
-
-.cloud {
-    background: #ECE9E6;  
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6); 
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 }
