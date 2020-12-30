@@ -1,48 +1,233 @@
-.vercenter {
-  margin-left: 25vw;
-  margin-right: 25vw;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+body {
+    font-family: 'Muli', sans-serif;
+    margin: 0px;
 }
 
-#main-text {
-    font-size: 35px;
+.content-mid {
+    box-sizing: border-box;
     width: 100%;
-    height: 100%;
-    font-family: 'Muli', sans-serif;
+    padding: 0px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.vercenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title-text {
+    font-size: 35px;
+    padding: 70px;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    height: 260px;
+    width: 275px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    padding: 20px;
+    border: 1.5px solid #FFFFFF;
+}
+
+span {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 hr {
-    border: 0 none;
-    height: 0.5px;
-    background: #000000;
-    border-radius: 100px;
-}
-
-@media screen and (max-width: 600px) {}
-    .vercenter {
-  margin-left: 10vw;
-  margin-right: 10vw;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
+    margin: 10px !important;
 }
 
 a {
+    font-size: 100%;
+    padding: 0.5em 1em;
+    color: #FFFFFF;
+    border-radius: 30px;
+    border: 1.5px solid #FFFFFF;
+    background-color: transparent;
     text-decoration: none;
 }
 
-.mispronounced {
-    background: #FFFFFF;
-    font-size: 15px;
-    height: 6vh;
-    padding: 0.5vh;
-
+.card:hover a {
+    color: #000000;
+    border: 1.5px solid #000000;
 }
 
-.mispronounced:hover {
-    background: #F5F5F5;
-    transition: .3s background;
+/* Colors */
+
+.georgia-tech {
+    background-color: #335161;
+    color: #FFFFFF;
+}
+
+.georgia-tech:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1.5px solid #335161;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.georgia-tech:hover a {
+    color: #335161;
+    border: 1.5px solid #335161;
+    background-color: transparent;
+}
+
+.georgia-tech:hover a:hover {
+    background-color: #335161;
+    color: #FFFFFF;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.uscisi {
+    background-color: #962037;
+    color: #FFFFFF;
+}
+
+.uscisi:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1.5px solid #962037;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.uscisi:hover a {
+    color: #962037;
+    border: 1.5px solid #962037;
+    background-color: transparent;
+}
+
+.uscisi:hover a:hover {
+    background-color: #962037;
+    color: #FFFFFF;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sc20 {
+    background-color: #452B48;
+    color: #FFFFFF;
+}
+
+.sc20:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1.5px solid #452B48;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sc20:hover a {
+    color: #452B48;
+    border: 1.5px solid #452B48;
+    background-color: transparent;
+}
+
+.sc20:hover a:hover {
+    background-color: #452B48;
+    color: #FFFFFF;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cs2200 {
+    background-color: #EAAA00;
+    color: #FFFFFF;
+}
+
+.cs2200:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1.5px solid #EAAA00;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.gci {
+    background-color: #215096;
+    color: #FFFFFF;
+}
+
+.gci:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1.5px solid #215096;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.gci:hover a {
+    color: #215096;
+    border: 1.5px solid #215096;
+    background-color: transparent;
+}
+
+.gci:hover a:hover {
+    background-color: #215096;
+    color: #FFFFFF;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.josm {
+    background-color: #a8c98b;
+    color: #FFFFFF;
+}
+
+.josm:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1.5px solid #a8c98b;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.josm:hover a {
+    color: #a8c98b;
+    border: 1.5px solid #a8c98b;
+    background-color: transparent;
+}
+
+.josm:hover a:hover {
+    background-color: #a8c98b;
+    color: #FFFFFF;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.patent {
+    background-color: #546e7a;
+    color: #FFFFFF;
+}
+
+.patent:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1.5px solid #546e7a;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.fish {
+    background-color: #01579b;
+    color: #FFFFFF;
+}
+
+.fish:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1.5px solid #01579b;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.thesis {
+    background-color: #006064;
+    color: #FFFFFF;
+}
+
+.thesis:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1.5px solid #006064;
+    transition: background-color 0.2s ease-in-out;
 }
